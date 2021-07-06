@@ -5,6 +5,7 @@
 This repo contains all my personalize system dotfiles. My dwm build and most of applications use [pywal](https://github.com/dylanaraps/pywal) for generate color palette. If you wish to use my dots and dwm build you should install pywal first.
 
 ![screenshot](https://raw.githubusercontent.com/nipunravisara/dots-x2/master/screenshots/screenshot-0.png)
+![screenshot](https://raw.githubusercontent.com/nipunravisara/dots-x2/master/screenshots/screenshot-1.png)
 
 ## Contents
 

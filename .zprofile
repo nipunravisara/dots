@@ -1,5 +1,5 @@
 # Personal scripts path
-#export PATH=~/bin:$PATH
+export PATH=~/bin:$PATH
 
 # Start xserver
 startx

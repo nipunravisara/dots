@@ -23,9 +23,6 @@ alias d='/usr/bin/git --git-dir=/home/rbt/.dots/ --work-tree=/home/rbt'
 # Pywal theme apply
 cat ~/.cache/wal/sequences
 
-# Personal script path
-export PATH=~/bin:$PATH
-
 # Local path
 export PATH=$PATH:~/.local/bin
 
