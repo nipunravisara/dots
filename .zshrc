@@ -18,7 +18,7 @@ alias rr="reboot"
 alias m="udisksctl mount -b"
 alias u="udisksctl unmount -b"
 alias r="ranger"
-alias dots='/usr/bin/git --git-dir=/home/rbt/.dots/ --work-tree=/home/rbt'
+alias d='/usr/bin/git --git-dir=/home/rbt/.dots/ --work-tree=/home/rbt'
 
 # Pywal theme apply
 cat ~/.cache/wal/sequences
