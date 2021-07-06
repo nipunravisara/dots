@@ -1,0 +1,100 @@
+// Theme colors ----------------------------------------------------
+
+$background-color: rgb(34, 36, 46);
+$forground-color: rgb(202, 202, 202);
+$highlight-color: rgb(164, 207, 140);
+$shadow-color: rgb(112, 112, 112);
+
+// Common ----------------------------------------------------------
+
+* {
+  all: unset;
+  font-family: monospace;
+}
+
+windows {
+  background-color: transparent;
+}
+
+.bg {
+  background-color: transparent;
+}
+
+// widget card -----------------------------------------------------
+
+.card {
+  background-color: $background-color;
+  border-radius: 25px;
+
+  :hover {
+    background-color: rgb(39, 41, 54);
+    border-radius: 25px;
+  }
+}
+
+// Profile ---------------------------------------------------------
+
+.face {
+  background-size: cover;
+  min-height: 326px;
+  min-width: 326px;
+  margin: 80px 0px 60px 0px;
+  border-radius: 10%;
+}
+
+.username {
+  color: $highlight-color;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.hostname {
+  color: $forground-color;
+  font-size: 40px;
+  font-weight: bold;
+  margin: -20px 0px 0px 0px;
+}
+
+.clock_date {
+  color: $forground-color;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0px 0px 20px 0px;
+}
+
+.clock_time {
+  color: $highlight-color;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.btn {
+  font-size: 48px;
+  font-weight: bold;
+  color: $forground-color;
+}
+
+.btn_icon {
+  color: $forground-color;
+  font-size: 48;
+  font-weight: bold;
+}
+
+.btn_text {
+  color: $forground-color;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.memory_available_text {
+  color: $highlight-color;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.memory_total_text {
+  color: $forground-color;
+  font-size: 25px;
+  font-weight: bold;
+}

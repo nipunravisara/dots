@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ "$1" == "--available" ]; then
+	printf %.1f $(free -m | grep Mem | awk '{print ($4/1024)}')
+
+elif [ "$1" == "--total" ]; then
+	printf %.1f $(free -m | grep Mem | awk '{print ($2/1024)}')
+fi
