@@ -1,0 +1,5 @@
+#!/bin/bash
+
+~/.config/herbstluftwm/configs/theme
+~/.config/herbstluftwm/configs/keybinds
+~/.config/herbstluftwm/configs/setup

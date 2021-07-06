@@ -1,0 +1,34 @@
+#!/bin/bash
+
+hc() {
+    herbstclient "$@"
+}
+
+# rules
+hc unrule -F
+hc rule focus=on
+hc rule floatplacement=smart
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on
+hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
+hc set tree_style '╾│ ├└╼─┐'
+
+# find the panel
+panel=~/.config/herbstluftwm/panel.sh
+[ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
+for monitor in $(hc list_monitors | cut -d: -f1) ; do
+    # start it on each monitor
+    "$panel" "$monitor" &
+done
+
+# Set monitor size
+herbstclient set_monitors 3840x2090+0+70
+
+# Restore wallpaper
+~/.fehbg
+
+# Run eww
+# eww daemon
+
+# unlock, just to be sure
+hc unlock
