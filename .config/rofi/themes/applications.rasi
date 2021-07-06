@@ -1,0 +1,68 @@
+configuration {
+  width: 1000;
+  display-drun: "";
+  show-icons: true;
+  font: "Fira code 20";
+  modi: "window,run,drun";
+  drun-display-format: "{icon} {name}";
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+  background-color: #111116;
+  text-color: #d9dad9;
+  heighlight-color: #1b1b24;
+}
+
+window {
+  border: 2px;
+  border-radius: 5px;
+  transparency: "real";
+  border-color: #333333;
+}
+
+mainbox {
+  padding: 40;
+  children: [inputbar, listview];
+}
+
+listview {
+  columns: 1;
+  lines: 10;
+}
+
+entry {
+  padding: 10 0 70 0;
+  text-color: @text-color;
+  font: "Fira code 30";
+  placeholder-padding: 20;
+  placeholder: "Search";
+  placeholder-color: #343746;
+}
+
+element {
+  padding: 15 15 15 20;
+  font: "Fira code 20";
+  orientation: horizontal;
+  text-color: @text-color;
+  border-radius: 5;
+}
+
+element selected {
+  text-color: #e4ea97;
+  background-color: @heighlight-color;
+}
+
+element-icon { 
+  size: 50;
+  vertical-align: 1.0;  
+  horizontal-align: 1.0; 
+}
+
+element-text {  
+  margin: 0 0 0 20;   
+  vertical-align: 0.5; 
+} 
