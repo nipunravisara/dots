@@ -7,7 +7,7 @@ configuration {
 	line-margin: 25;
 	show-icons: true;
 	auto-select: false;
-	font: "monospace 18";
+	font: "Fira code 18";
 	hide-scrollbar: true;
 	separator-style: "solid";
 	modi: "window,drun,ssh,file-browser";

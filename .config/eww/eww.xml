@@ -268,8 +268,8 @@
 
 	<variables>
 		<!-- Profile -->
-		<script-var name="USERNAME" interval="5m">whoami</script-var>
-		<script-var name="HOSTNAME" interval="5m">hostname</script-var>
+		<script-var name="USERNAME" interval="5m">rbt</script-var>
+		<script-var name="HOSTNAME" interval="5m">rbthl</script-var>
 
 		<!-- Datetime -->
 		<script-var name="MONTH" interval="5s">date +"%b"</script-var>

@@ -39,10 +39,13 @@ fi
 ~/.fehbg &
 
 # Start eww
-eww daemon
+eww daemon &
 
-# Set 
-xsetroot -name "$(date '+%b %d (%a) %H:%M') "
+# Set status 
+#xsetroot -name "$(date '+%b %d (%a) %H:%M') "
+
+# Start dwm blocks
+dwmblocks &
 
 # Start dwm
 while type dwm >/dev/null ; do dwm && continue || break ; done
