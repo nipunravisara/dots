@@ -21,5 +21,8 @@ This repo contains all my personalize system dotfiles for arch linux. [My dwm bu
 
 ![screenshot](https://raw.githubusercontent.com/nipunravisara/dots-x2/master/screenshots/screenshot-0.png)
 ![screenshot](https://raw.githubusercontent.com/nipunravisara/dots-x2/master/screenshots/screenshot-1.png)
-![screenshot](https://raw.githubusercontent.com/nipunravisara/dots-x2/master/screenshots/screenshot-2.jpg)
+![screenshot](https://raw.githubusercontent.com/nipunravisara/dots-x2/master/screenshots/screenshot-2.png)
+![screenshot](https://raw.githubusercontent.com/nipunravisara/dots-x2/master/screenshots/screenshot-3.png)
+![screenshot](https://raw.githubusercontent.com/nipunravisara/dots-x2/master/screenshots/screenshot-4.png)
+
 
