@@ -2,22 +2,23 @@
 
 $background-color: rgb(34, 36, 46);
 $forground-color: rgb(202, 202, 202);
-$highlight-color: rgb(164, 207, 140);
+$highlight-color: rgb(58, 169, 233);
 $shadow-color: rgb(112, 112, 112);
 
 // Common ----------------------------------------------------------
 
 * {
   all: unset;
-  font-family: monospace;
+  font-family: Fira Code;
 }
 
-windows {
-  background-color: transparent;
-}
+// windows {
+//   background-color: rgba(0, 0, 0, 0.699);
+// }
 
 .bg {
-  background-color: transparent;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.5;
 }
 
 // widget card -----------------------------------------------------
@@ -50,14 +51,14 @@ windows {
 
 .hostname {
   color: $forground-color;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: bold;
   margin: -20px 0px 0px 0px;
 }
 
 .clock_date {
   color: $forground-color;
-  font-size: 40px;
+  font-size: 34px;
   font-weight: bold;
   margin: 0px 0px 20px 0px;
 }
@@ -70,14 +71,13 @@ windows {
 
 .btn {
   font-size: 48px;
-  font-weight: bold;
+  // font-weight: bold;
   color: $forground-color;
 }
 
 .btn_icon {
   color: $forground-color;
   font-size: 48;
-  font-weight: bold;
 }
 
 .btn_text {

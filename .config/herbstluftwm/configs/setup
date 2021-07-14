@@ -22,13 +22,13 @@ for monitor in $(hc list_monitors | cut -d: -f1) ; do
 done
 
 # Set monitor size
-herbstclient set_monitors 3840x2090+0+70
+herbstclient set_monitors 3840x2160+0+0
 
 # Restore wallpaper
 ~/.fehbg
 
 # Run eww
-# eww daemon
+eww daemon
 
 # unlock, just to be sure
 hc unlock

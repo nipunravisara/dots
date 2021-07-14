@@ -32,7 +32,7 @@
 		<!-- Logout button -->
 		<def name="logout">
 			<box class="card" vexpand="false" hexpand="false">
-				<button class="btn" onclick="quit"></button>
+				<button class="btn" onclick="quit"></button>
 			</box>
 		</def>
 
@@ -41,9 +41,9 @@
 			<box class="card">
 				<button class="btn" onclick="systemctl poweroff">
 					<box orientation="h" halign="center" spacing="10" space-evenly="false" vexpand="false" hexpand="false">
-						<label class="btn_icon" wrap="false" text="  "/>
+						<label class="btn_icon" wrap="false" text=""/>
 						<box orientation="v" valign="center" spacing="0" space-evenly="false" vexpand="false" hexpand="false">
-							<label class="btn_text" wrap="false" text="Power off "/>
+							<label class="btn_text" wrap="false" text="Power off"/>
 						</box>
 					</box>
 				</button>
@@ -55,7 +55,7 @@
 			<box class="card">
 				<button class="btn" onclick="systemctl reboot">
 					<box orientation="h" halign="center" spacing="40" space-evenly="false" vexpand="false" hexpand="false">
-						<label class="btn_icon" wrap="false" text=" "/>
+						<label class="btn_icon" wrap="false" text=""/>
 						<box orientation="v" valign="center" spacing="0" space-evenly="false" vexpand="false" hexpand="false">
 							<label class="btn_text" wrap="false" text="Restart "/>
 						</box>
@@ -67,28 +67,28 @@
 		<!-- Lock button -->
 		<def name="lock">
 			<box class="card" vexpand="false" hexpand="false">
-				<button class="btn" onclick="~/.config/eww/scripts/openProgram st -e slock"></button>
+				<button class="btn" onclick="~/.config/eww/scripts/openProgram st -e slock"></button>
 			</box>
 		</def>
 
 		<!-- Files button -->
 		<def name="files">
 			<box class="card" vexpand="false" hexpand="false">
-				<button class="btn" onclick="~/.config/eww/scripts/openProgram thunar ~/"></button>
+				<button class="btn" onclick="~/.config/eww/scripts/openProgram thunar ~/"></button>
 			</box>
 		</def>
 
 		<!-- Code button -->
 		<def name="code">
 			<box class="card" vexpand="false" hexpand="false">
-				<button class="btn" onclick="~/.config/eww/scripts/openProgram code"></button>
+				<button class="btn" onclick="~/.config/eww/scripts/openProgram code"></button>
 			</box>
 		</def>
 
 		<!-- System button -->
 		<def name="system">
 			<box class="card" vexpand="false" hexpand="false">
-				<button class="btn" onclick="~/.config/eww/scripts/openProgram st -e htop"></button>
+				<button class="btn" onclick="~/.config/eww/scripts/openProgram alacritty -e htop"></button>
 			</box>
 		</def>
 
@@ -102,14 +102,14 @@
 		<!-- Gmail button -->
 		<def name="gmail">
 			<box class="card" vexpand="false" hexpand="false">
-				<button class="btn" onclick="~/.config/eww/scripts/openProgram firefox -new-tab 'www.gmail.com'"></button>
+				<button class="btn" onclick="~/.config/eww/scripts/openProgram firefox -new-tab 'www.gmail.com'"></button>
 			</box>
 		</def>
 
 		<!-- Firefox button -->
 		<def name="firefox">
 			<box class="card" vexpand="false" hexpand="false">
-				<button class="btn" onclick="~/.config/eww/scripts/openProgram firefox -new-tab"></button>
+				<button class="btn" onclick="~/.config/eww/scripts/openProgram firefox -new-tab"></button>
 			</box>
 		</def>
 
@@ -117,10 +117,10 @@
 		<def name="music">
 			<box class="card">
 				<box orientation="h" halign="center" spacing="40" space-evenly="false" vexpand="false" hexpand="false">
-					<label class="btn_icon" valign="center" text=""/>
+					<label class="btn_icon" valign="center" text=""/>
 					<box orientation="v" valign="center" spacing="0" space-evenly="false" vexpand="false" hexpand="false">
-						<label class="memory_available_text" halign="start" wrap="true" limit-width="15" text="Homicide"/>
-						<label class="memory_total_text" halign="start" wrap="true" limit-width="15" text="Logic ft Eminem"/>
+						<label class="memory_available_text" halign="start" wrap="true" limit-width="15" text="{{SONG}}"/>
+						<label class="memory_total_text" halign="start" wrap="true" limit-width="15" text="{{ARTIST}}"/>
 					</box>
 				</box>
 			</box>
@@ -130,7 +130,7 @@
 		<def name="memory">
 			<box class="card">
 				<box orientation="h" halign="center" spacing="40" space-evenly="false" vexpand="false" hexpand="false">
-					<label class="btn_icon" valign="center" text=""/>
+					<label class="btn_icon" valign="center" text=""/>
 					<box orientation="v" valign="center" spacing="0" space-evenly="false" vexpand="false" hexpand="false">
 						<label class="memory_available_text" halign="start" wrap="true" limit-width="25" text="{{AVAILABLE_MEMORY}} GB Free"/>
 						<label class="memory_total_text" halign="start" wrap="true" limit-width="25" text="{{TOTAL_MEMORY}}GB"/>
@@ -268,8 +268,8 @@
 
 	<variables>
 		<!-- Profile -->
-		<script-var name="USERNAME" interval="5m">rbt</script-var>
-		<script-var name="HOSTNAME" interval="5m">rbthl</script-var>
+		<script-var name="USERNAME" interval="5m">whoami</script-var>
+		<script-var name="HOSTNAME" interval="5m">cat /proc/sys/kernel/hostname</script-var>
 
 		<!-- Datetime -->
 		<script-var name="MONTH" interval="5s">date +"%b"</script-var>
@@ -282,6 +282,10 @@
 		<!-- Memory -->
 		<script-var name="AVAILABLE_MEMORY" interval="1s">~/.config/eww/scripts/getMemory --available</script-var>
 		<script-var name="TOTAL_MEMORY" interval="1s">~/.config/eww/scripts/getMemory --total</script-var>
+
+		<!-- Player -->
+		<script-var name="SONG" interval="1s">player --song</script-var>
+		<script-var name="ARTIST" interval="1s">player --artist</script-var>
 
 	</variables>
 </eww>
