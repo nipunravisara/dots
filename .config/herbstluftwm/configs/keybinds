@@ -28,17 +28,23 @@ hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}"
 hc keybind $Mod-e spawn ~/.config/eww/launch
 
 # volume control
-hc keybind XF86AudioRaiseVolume spawn pamixer -i '5'
-hc keybind XF86AudioLowerVolume spawn pamixer -d '5'
+hc keybind XF86AudioRaiseVolume spawn volume '--inc'
+hc keybind XF86AudioLowerVolume spawn volume '--dec'
 hc keybind XF86AudioMute spawn pamixer -t
+
+hc keybind XF86MonBrightnessUp spawn brightness '--inc'
+hc keybind XF86MonBrightnessDown spawn brightness '--dec'
 
 # music control
 hc keybind XF86AudioNext spawn playerctl next
 hc keybind XF86AudioPrev spawn playerctl previous
 hc keybind XF86AudioPlay spawn playerctl play-pause
 
+# theme switcher
+hc keybind $Mod-a spawn themeswitcher '--dwm'
+
 # screenshot
-hc keybind Print spawn "screenshot"
+hc keybind Print spawn screenshot
 
 # application menu
 hc keybind $Mod-d spawn rofi -show drun
@@ -56,8 +62,8 @@ hc keybind $Mod-Shift-Up    shift up
 hc keybind $Mod-Shift-Right shift right
 
 # create an empty frame at the specified direction
-hc keybind $Mod-u       split   bottom  0.5
-hc keybind $Mod-o       split   right   0.5
+hc keybind $Mod-u split   bottom  0.5
+hc keybind $Mod-o split   right   0.5
 
 # let the current frame explode into subframes
 hc keybind $Mod-Control-space split explode

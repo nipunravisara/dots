@@ -13,12 +13,13 @@ source $ZSH/oh-my-zsh.sh
 # Alias
 alias v="vim"
 alias q="exit"
-alias pp="poweroff"
-alias rr="reboot"
+alias pp="loginctl poweroff"
+alias rr="loginctl restart"
 alias m="udisksctl mount -b"
 alias u="udisksctl unmount -b"
 alias r="ranger"
-alias d='/usr/bin/git --git-dir=/home/rbt/.dots/ --work-tree=/home/rbt'
+alias ff="fetch"
+alias d='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 
 # Pywal theme apply
 cat ~/.cache/wal/sequences
@@ -27,15 +28,22 @@ cat ~/.cache/wal/sequences
 export PATH=$PATH:~/.local/bin
 
 # Rust path
-export PATH="$HOME/.cargo/bin:$PATH"
+#export PATH="$HOME/.cargo/bin:$PATH"
 
 # Eww path
-export PATH="$HOME/eww/target/release:$PATH"
+#export PATH="$HOME/eww/target/release:$PATH"
 
 # NVM path
 source /usr/share/nvm/init-nvm.sh
 
 # Yarn path
 export PATH="$PATH:`yarn global bin`"
+
+# Android SDK
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 

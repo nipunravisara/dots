@@ -2,7 +2,7 @@ configuration {
   width: 1000;
   display-drun: "";
   show-icons: true;
-  font: "Fira Code 20";
+  font: "SFMono 20";
   modi: "window,run,drun";
   drun-display-format: "{icon} {name}";
 }
@@ -37,7 +37,7 @@ listview {
 entry {
   padding: 10 0 70 0;
   text-color: @text-color;
-  font: "Fira Code 35";
+  font: "SFMono 35";
   placeholder-padding: 20;
   placeholder: "Search";
   placeholder-color: #343746;
@@ -45,7 +45,7 @@ entry {
 
 element {
   padding: 15 15 15 20;
-  font: "Fira Code 20";
+  font: "SFMono 20";
   orientation: horizontal;
   text-color: @text-color;
   border-radius: 5;

@@ -41,17 +41,16 @@ fi
 # Start eww
 #eww daemon &
 
-# Set status 
-#xsetroot -name "$(date '+%b %d (%a) %H:%M') "
-
 # Start dwm blocks
-#dwmblocks &
+dwmblocks &
 
 # Start picom
 picom --experimental-backends &
 
 # Start dwm
-#while type dwm >/dev/null ; do dwm && continue || break ; done
+while type dwm >/dev/null ; do dwm && continue || break ; done
+
 
 # Start herbstluftwm
-while type herbstluftwm >/dev/null ; do herbstluftwm --locked && continue || break ; done
+#exec herbstluftwm --locked
+# while type herbstluftwm >/dev/null ; do herbstluftwm --locked && continue || break ; done

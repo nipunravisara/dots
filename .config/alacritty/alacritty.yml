@@ -3,10 +3,10 @@ cursor:
 
 font:
     normal:
-      family: Fira code
+      family: DejaVu Sans Mono
     size: 12.0
     offset:
-      x: 1
+      x: 0
       y: 5
 
 window:
