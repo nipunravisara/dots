@@ -1,0 +1,56 @@
+# Reload functions
+super + Escape
+	"$XDG_CONFIG_HOME"/sxhkd/functions
+
+#------------------------ Application controls ------------------------
+
+# Open terminal
+super + Return
+        alacritty
+
+super + d
+	rofi -show drun
+
+#------------------------ Audio, Brightness controls ------------------------
+
+# Audio control
+XF86Audio{Mute,RaiseVolume,LowerVolume}
+	pamixer {-t,-i 5,-d 5}
+
+# Backlight control
+XF86MonBrightness{Up,Down}
+	xbacklight {-inc 5,-dec 5}
+
+#------------------------ Window controls ------------------------
+
+# Close window
+super + q
+	bspc node -c
+
+# Set the window state
+super + {t,s,f}
+	bspc node -t {tiled,,floating,fullscreen}
+
+# Focus next/previous window
+super + {Left, Right}
+ 	bspc node -f {prev, next}.local.!above
+
+# Focus other desktop
+super + {1-9, 0}
+ 	bspc desktop -f focused:'^{1-9,10}'
+
+# Move window to other desktop
+super + shift + {1-9, 0}
+ 	bspc node -d focused:'^{1-9, 10}'
+
+# Expand a window by moving one of its side outward
+super + alt + {Left,Down,Up,Right}
+ 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# Contract a window by moving one of its side inward
+super + alt + shift + {Left,Down,Up,Right}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# Exit bspwm
+super + shift + {q, w}
+	bspc {quit, wm -r}
