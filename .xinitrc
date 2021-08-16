@@ -47,10 +47,12 @@ fi
 # Start picom
 picom --experimental-backends &
 
+# Start bspwm
+exec bspwm
+
 # Start dwm
 #while type dwm >/dev/null ; do dwm && continue || break ; done
 
 
 # Start herbstluftwm
-exec herbstluftwm --locked
-# while type herbstluftwm >/dev/null ; do herbstluftwm --locked && continue || break ; done
+# exec herbstluftwm --locked

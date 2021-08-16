@@ -21,4 +21,3 @@ alias r="ranger"
 alias ff="fetch"
 alias d='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 
-
