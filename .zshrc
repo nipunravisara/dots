@@ -19,5 +19,6 @@ alias m="udisksctl mount -b"
 alias u="udisksctl unmount -b"
 alias r="ranger"
 alias ff="fetch"
-alias d='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
+alias d="/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME"
+alias net="ping google.com"
 

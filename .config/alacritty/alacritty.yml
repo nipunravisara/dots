@@ -3,7 +3,7 @@ cursor:
 
 font:
     normal:
-      family: DejaVu Sans Mono
+      family: Overpass Mono
     size: 12.0
     offset:
       x: 0

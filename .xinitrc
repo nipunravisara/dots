@@ -7,8 +7,8 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 
 # merge in defaults and keymaps
 
-
-xrdb -load ~/.Xresources
+#xrdb -load ~/.Xresources
+xrdb -merge ~/.Xresources
 
 if [ -f $sysresources ]; then
     xrdb -merge $sysresources
