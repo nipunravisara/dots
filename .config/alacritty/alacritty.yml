@@ -15,7 +15,7 @@ window:
     y: 20
   dynamic_padding: true
 
-background_opacity: 0.9
+background_opacity: 1
 
 shell:
   program: /bin/zsh

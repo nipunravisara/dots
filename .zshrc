@@ -11,14 +11,14 @@ plugins=(git zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 # Alias
-alias v="vim"
+alias v="nvim"
 alias q="exit"
-alias pp="loginctl poweroff"
-alias rr="loginctl restart"
+alias pp="poweroff"
+alias rr="reboot"
 alias m="udisksctl mount -b"
 alias u="udisksctl unmount -b"
 alias r="ranger"
 alias ff="fetch"
 alias d="/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME"
-alias net="ping google.com"
-
+alias p="ping google.com"
+alias c="connmanctl"

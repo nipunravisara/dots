@@ -16,3 +16,5 @@ source /usr/share/nvm/init-nvm.sh
 # Yarn path
 export PATH="$PATH:`yarn global bin`"
 
+# Start xorg
+startx

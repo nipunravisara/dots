@@ -6,11 +6,19 @@ super + Escape
 
 # Open terminal
 super + Return
-        alacritty
-
-super + d
 	rofi -show drun
 
+super + t
+	wallpaperswitcher
+
+super + w
+	wifimenu
+
+super + a
+	alacritty
+
+super + d
+	devicemenu
 #------------------------ Audio, Brightness controls ------------------------
 
 # Audio control
