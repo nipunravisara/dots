@@ -1,3 +1,3 @@
 
 #define PrintColours    true
-#define ColourCharacter "● "
+#define ColourCharacter ""
