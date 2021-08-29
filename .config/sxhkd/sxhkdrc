@@ -6,7 +6,7 @@ super + Escape
 
 # Open terminal
 super + Return
-	rofi -show drun
+	applicationmenu
 
 super + t
 	wallpaperswitcher

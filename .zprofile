@@ -4,6 +4,9 @@ export PATH=~/.scripts/:$PATH
 # Local path
 export PATH=$PATH:~/.local/bin
 
+# Emacs path
+export PATH=$PATH:~/.emacs.d/bin
+
 # Rust path
 #export PATH="$HOME/.cargo/bin:$PATH"
 
