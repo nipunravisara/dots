@@ -19,6 +19,12 @@ super + a
 
 super + d
 	devicemenu
+
+super + b
+	brave
+
+super + Print
+	screenshot
 #------------------------ Audio, Brightness controls ------------------------
 
 # Audio control

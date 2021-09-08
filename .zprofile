@@ -1,5 +1,5 @@
 # Personal scripts path
-export PATH=~/.scripts/:$PATH
+export PATH=~/.bin/:$PATH
 
 # Local path
 export PATH=$PATH:~/.local/bin
