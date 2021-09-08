@@ -45,7 +45,7 @@ picom --experimental-backends &
 #dwmblocks &
 
 # polybar
-#~/.config/polybar/launch.sh
+~/.config/polybar/launch.sh
 
 # Start bspwm
 exec bspwm
