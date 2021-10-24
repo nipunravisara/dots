@@ -45,13 +45,13 @@ picom --experimental-backends &
 #dwmblocks &
 
 # polybar
-~/.config/polybar/launch.sh
-
-# Start bspwm
-exec bspwm
+#~/.config/polybar/launch.sh
 
 # Start dwm
 #while type dwm >/dev/null ; do dwm && continue || break ; done
 
 # Start herbstluftwm
 # exec herbstluftwm --locked
+
+# Start bspwm
+exec bspwm
