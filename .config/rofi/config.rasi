@@ -1,14 +1,5 @@
 configuration {
-	bw: 0;
-	eh: 1;
-	lines: 15;
-	columns: 1;
-	padding: 50;
-	line-margin: 25;
-	show-icons: true;
-	auto-select: false;
-	font: "Overpass Nerd Font 18";
-	hide-scrollbar: true;
-	separator-style: "solid";
-	modi: "window,drun,ssh,file-browser";
-}
+ modi: "window,drun,ssh,combi";
+ font: "Overpass 10";
+ combi-modi: "window,drun,ssh";
+ }

@@ -1,5 +1,5 @@
 configuration {
-  width: 1000;
+  width: 100;
   matching: "fuzzy";
   display-drun: "";
   show-icons: true;
@@ -26,19 +26,18 @@ listview {
 }
 
 entry {
-  padding: 10 0 70 0;
-  font: "OverpassMono Nerd Font 35";
-  placeholder: "Search";
+  padding: 40 0 80 20;
+  font: "OverpassMono Nerd Font 40";
+  placeholder: "Search...";
 }
 
 element {
-  padding: 15 15 15 20;
+  padding: 25 25 25 25;
   orientation: horizontal;
   border-radius: 10;
 }
 
 element selected {
-  text-color: @background-color;
   background-color: @selected-color;
 }
 
@@ -48,7 +47,17 @@ element-icon {
   horizontal-align: 1.0; 
 }
 
+element-icon selected {
+ background-color: @selected-color;
+}
+
 element-text {  
-  margin: 0 0 0 20;   
+  font: "OverpassMono Nerd Font 22";
+  margin: 0 0 0 30;   
   vertical-align: 0.5; 
-} 
+}
+
+element-text selected {
+ background-color: @selected-color;
+ text-color: @background-color;
+}

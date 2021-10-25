@@ -29,7 +29,7 @@ super + Print
 
 # Audio control
 XF86Audio{Mute,RaiseVolume,LowerVolume}
-	pamixer {-t,-i 5,-d 5}
+	volume { --m, --inc, --dec}
 
 # Backlight control
 XF86MonBrightness{Up,Down}
