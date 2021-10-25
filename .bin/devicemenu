@@ -1,0 +1,9 @@
+#! /bin/bash
+
+device="$(blkid | grep "sda" | cut -d" " -f1,2 | rofi -dmenu -theme "$HOME/.config/rofi/themes/devices.rasi" | cut -d":" -f1)"
+
+if [[ ! -z "$device" ]]; then
+    udisksctl mount -b $device &> /dev/null
+    notify-send "Device mounted." "Now you can access mounted device."
+fi
+

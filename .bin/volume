@@ -1,0 +1,41 @@
+#! /bin/bash
+
+notifcation_id="22112"
+
+function get_volume {
+  pamixer --get-volume
+}
+
+function send_notification {
+  volume=$(get_volume)
+  dunstify -r "$notifcation_id" -u low -t 1000 "volume: $volume%"  
+}
+
+function increase_volume {
+  pamixer -i '5'
+  send_notification
+}
+
+function decrease_volume {
+  pamixer -d '5'
+  send_notification
+}
+
+function mute_volume {
+  muted=$(pamixer --get-mute)
+  pamixer -t
+
+  if [ "$muted" == true ]; then
+	  dunstify -r "$notifcation_id" -u low -t 1000 "Muted"
+  elif [ "$muted" == false ]; then
+	  send_notification
+  fi
+}
+
+if [ "$1" == "--inc" ]; then
+	increase_volume
+elif [ "$1" == "--dec" ]; then
+	decrease_volume
+elif [ "$1" == "--m" ]; then
+	mute_volume
+fi

@@ -1,0 +1,4 @@
+#! /bin/bash
+
+dir="$HOME/Pictures/Screenshots"
+scrot $dir/'%Y-%m-%d-%S_$wx$h.jpg'; dunstify -u low -t 1500 "Snapshot captured" "Saved in screenshots"

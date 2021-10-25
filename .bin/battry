@@ -1,0 +1,19 @@
+#! /bin/bash
+
+chargingIcon=""
+lowIcon=""
+normalIcon=""
+
+precentage="$(cat /sys/class/power_supply/BAT0/capacity)"
+status="$(cat /sys/class/power_supply/BAT0/status)"
+
+if [ $status == "Charging" ]
+then
+   printf  "%s %s \\n" "$chargingIcon" "$precentage"%
+elif [ $precentage -lt 10 ]
+then
+   printf  "%s %s \\n" "$lowIcon" "$precentage"%
+else
+   printf  "%s %s \\n" "$normalIcon" "$precentage"%
+fi
+

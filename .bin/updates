@@ -1,0 +1,6 @@
+#! /bin/bash
+
+icon=""
+packages="$(pacman -Qu | wc -l)"
+printf "%s %s \\n" "$icon" "$packages"
+
