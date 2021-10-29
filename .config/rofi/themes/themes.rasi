@@ -1,5 +1,5 @@
 configuration {
-  width: 1000;
+  width: 100;
   modi: "window,run,drun";
   font: "SFMono 20";
 }

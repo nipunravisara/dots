@@ -4,6 +4,9 @@ source ~/.config/nvim/shortcuts.vim
 " Plugins
 source ~/.config/nvim/plugins.vim
 
+" Comp congigs
+luafile ~/.config/nvim/compe-config.lua
+
 " Basic settings
 set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching 
@@ -13,6 +16,7 @@ set hlsearch                " highlight search
 set incsearch               " incremental search
 set tabstop=4               " number of columns occupied by a tab 
 set softtabstop=4           " see multiple spaces as tabs tops so <BS> does the right thing
+set splitbelow              " set terminal below
 set expandtab               " converts tabs to white space
 set shiftwidth=4            " width for auto indents
 set autoindent              " indent a new line the same amount as the line just typed

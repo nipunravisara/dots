@@ -1,8 +1,9 @@
 configuration {
-  width: 100;
+  width: 30;
   matching: "fuzzy";
   display-drun: "";
   show-icons: true;
+  icon-theme: "la-capitaine-icon-theme";
   drun-match-fields: "name,generic";
   modi: "window,run,drun";
 }

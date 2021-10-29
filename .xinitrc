@@ -5,6 +5,8 @@ usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
+xrandr
+
 # merge in defaults and keymaps
 xrdb -merge ~/.Xresources
 
@@ -39,6 +41,9 @@ xsetroot -cursor_name left_ptr &
 
 # Start picom
 picom --experimental-backends &
+
+# Start dunst
+dunst &
 
 # Start eww
 #eww daemon &
