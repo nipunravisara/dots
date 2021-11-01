@@ -5,7 +5,7 @@ source ~/.config/nvim/shortcuts.vim
 source ~/.config/nvim/plugins.vim
 
 " Comp congigs
-luafile ~/.config/nvim/compe-config.lua
+" luafile ~/.config/nvim/compe-config.lua
 
 " Basic settings
 set nocompatible            " disable compatibility to old-time vi

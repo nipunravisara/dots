@@ -23,3 +23,7 @@ alias r="ranger"
 alias d="/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME"
 alias p="ping google.com"
 alias c="connmanctl"
+
+alias dcb="docker-compose build"
+alias dcu="docker-compose up"
+alias dcd="docker-compose down"
