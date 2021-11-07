@@ -8,12 +8,11 @@ configuration {
   modi: "window,run,drun";
 }
 
-@import "~/.colors/ocean/ocean.rasi"
+@import "~/.colors/onedark/onedark.rasi"
 
 window {
   border: 2px;
   border-radius: 10px;
-  transparency: "real";
 }
 
 mainbox {

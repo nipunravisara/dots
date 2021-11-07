@@ -1,50 +1,54 @@
 [global]
-    monitor = 0
-    follow = mouse
-    offset = 40x40
-    indicate_hidden = yes
-    shrink = no
-    separator_height = 0
-    padding = 20
-    horizontal_padding = 20
-    frame_color = "#D0D0D0"
-    separator_color = frame
-    sort = yes
-    idle_threshold = 120
-    font = OverpassMono Nerd Font 10
-    line_height = 0
-    markup = full
-    format = "<b>%s</b>\n%b"
-    vertical_alignment = center
-    show_age_threshold = 60
-    word_wrap = yes
-    ellipsize = middle
-    ignore_newline = no
-    stack_duplicates = true
-    hide_duplicate_count = false
-    show_indicators = yes
-    always_run_script = true
-    title = Dunst
-    class = Dunst
-    corner_radius = 0
-    ignore_dbusclose = false
-    force_xinerama = false
-    mouse_right_click = close_current
-    mouse_left_click = do_action, close_current
-    mouse_middle_click = close_all
-    icon_position = off
+monitor = 0
+follow = mouse
+offset = 40x40
+indicate_hidden = yes
+shrink = no
+separator_height = 0
+padding = 20
+horizontal_padding = 32
+frame_width = 2
+sort = no
+idle_threshold = 120
+font = OverpassMono Nerd Font 10
+line_height = 4
+markup = full
+format = %s\n%b
+alignment = left
+show_age_threshold = 60
+word_wrap = yes
+ignore_newline = no
+stack_duplicates = false
+hide_duplicate_count = yes
+show_indicators = no
+icon_position = off
+sticky_history = yes
+history_length = 20
+browser = /usr/bin/firefox -new-tab
+always_run_script = true
+title = Dunst
+class = Dunst
+
+[shortcuts]
+close = ctrl+space
+close_all = ctrl+shift+space
+history = ctrl+grave
+context = ctrl+shift+period
 
 [urgency_low]
-    background = "#90A959"
-    foreground = "#151515"
-    timeout = 5
+timeout = 1
+background = "#141c21"
+foreground = "#93a1a1"
+frame_color = "#8bc34a"
 
 [urgency_normal]
-    background = "#151515"
-    foreground = "#d0d0d0"
-    timeout = 10
+timeout = 1
+background = "#141c21"
+foreground = "#93a1a1"
+frame_color = "#ba68c8"
 
 [urgency_critical]
-    background = "#AC4142"
-    foreground = "#151515"
-    timeout = 20
+timeout = 1
+background = "#141c21"
+foreground = "#93a1a1"
+frame_color = "#ff7043"

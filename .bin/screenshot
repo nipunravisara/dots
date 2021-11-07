@@ -1,4 +1,10 @@
 #! /bin/bash
 
 dir="$HOME/Pictures/Screenshots"
-scrot $dir/'%Y-%m-%d-%S_$wx$h.jpg'; dunstify -u low -t 1500 "Snapshot captured" "Saved in screenshots"
+
+fileName="$(rofi -dmenu -i -no-fixed-num-lines -p "File name: " -theme "$HOME/.config/rofi/themes/password.rasi")"
+
+sleep 1
+
+scrot $dir/$fileName'.jpg'; dunstify -u low -t 1500 "Snapshot captured" "Saved in screenshots"
+

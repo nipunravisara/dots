@@ -10,6 +10,9 @@ plugins=(git zsh-autosuggestions)
 # Oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
+export VISUAL=nvim;
+export EDITOR=nvim;
+
 # Alias
 alias pp="poweroff"
 alias rr="reboot"

@@ -23,8 +23,12 @@ super + d
 super + b
 	brave
 
-super + Print
+super + s
 	screenshot
+
+ctrl + super + backslash
+  alacritty -e htop
+
 #------------------------ Audio, Brightness controls ------------------------
 
 # Audio control
@@ -49,6 +53,10 @@ super + {t,s,f}
 super + {Left, Right}
  	bspc node -f {prev, next}.local.!above
 
+# Focus next window in the order
+alt + tab
+    bspc node -f next.local
+
 # Focus other desktop
 super + {1-9, 0}
  	bspc desktop -f focused:'^{1-9,10}'
@@ -57,13 +65,17 @@ super + {1-9, 0}
 super + shift + {1-9, 0}
  	bspc node -d focused:'^{1-9, 10}'
 
+# Resize a window
+super + shift + {Left,Right,Up,Down}
+	bspc node -z {left -20 0, left 20 0, top 0 -20, top 0 20}
+
 # Expand a window by moving one of its side outward
-super + alt + {Left,Down,Up,Right}
- 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+#super + alt + {Left,Down,Up,Right}
+# 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # Contract a window by moving one of its side inward
-super + alt + shift + {Left,Down,Up,Right}
-	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+#super + alt + shift + {Left,Down,Up,Right}
+#	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # Exit bspwm
 super + shift + {q, w}
