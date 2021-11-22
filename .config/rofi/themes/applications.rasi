@@ -8,7 +8,7 @@ configuration {
   modi: "window,run,drun";
 }
 
-@import "~/.colors/onedark/onedark.rasi"
+@import "~/.colors/ocean/ocean.rasi"
 
 window {
   border: 2px;
