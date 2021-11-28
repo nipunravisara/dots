@@ -1,5 +1,10 @@
+# Defalut applications
+export EDITOR="vim"
+export TERMINAL="st"
+export BROWSER="brave"
+
 # Personal scripts path
-export PATH=~/.bin/:$PATH
+export PATH=$PATH:$HOME/.local/bin
 
 # Local path
 export PATH=$PATH:~/.local/bin
