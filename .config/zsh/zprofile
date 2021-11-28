@@ -1,6 +1,6 @@
 # Defalut applications
-export EDITOR="vim"
-export TERMINAL="st"
+export EDITOR="nvim"
+export TERMINAL="alacritty"
 export BROWSER="brave"
 
 # Personal scripts path
