@@ -1,7 +1,5 @@
 import:
-  - ~/.colors/ocean/ocean.yml
-  # - ~/.colors/strypy/strypy.yml
-  # - ~/.colors/lily/lily.yml
+  - ~/.local/colors/ocean/ocean.yml
 
 cursor:
   style: Block
