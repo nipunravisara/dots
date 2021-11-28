@@ -5,6 +5,7 @@ export BROWSER="brave"
 
 # Personal scripts path
 export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.local/bin/utils
 
 # Local path
 export PATH=$PATH:~/.local/bin
