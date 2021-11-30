@@ -2,13 +2,16 @@
 
 default_dir=~/.local/wallpaper/
 wallpapers_dir=~/Pictures/wallpapers/
+rofi_dir=~/.config/rofi/img
 
 case $1 in
     --list)
         new_wallpaper="$(find $wallpapers_dir -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" | rofi -dmenu -theme "$HOME/.config/rofi/themes/menu.rasi")"
         if [[ ! -z "$new_wallpaper" ]] ; then
             rm -rf $default_dir/*
+            rm -rf $rofi_dir/*
             cp $new_wallpaper $default_dir
+            convert $new_wallpaper -define jpeg:extent=100kb -scale 35% -crop 40%x100%+0+0 -blur 0x8 $rofi_dir/wall.jpg
         fi
         xwallpaper --zoom "$(find "$default_dir" -type f -name "*.jpg" -o -name "*.png" | shuf -n1)" &> /dev/null
         ;;
