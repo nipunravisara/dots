@@ -1,15 +1,18 @@
 #! /bin/bash
 
-bssid="$(nmcli --fields "SSID, BSSID, ,SIGNAL, BARS, SECURITY" device wifi list | sed -n '1!p' | rofi -dmenu -theme "$HOME/.config/rofi/themes/wifimenu.rasi" | awk '{print $2}')"
+bssid="$(nmcli --fields "SSID" device wifi list  | sed -n '1!p' | sed 's/.*/   &/' | rofi -dmenu -theme "$HOME/.config/rofi/themes/wifimenu.rasi" | awk '{print $2}')"
 pass=""
+result=""
 
 if [[ ! -z "$bssid" ]] ; then
 	pass="$(rofi -dmenu -password -i -no-fixed-num-lines -p "Wifi password: " -theme "$HOME/.config/rofi/themes/password.rasi")"
 fi
 
 if [[ ! -z "$pass" ]]; then
-    nmcli d wifi connect $bssid password $pass &> /dev/null
+    resutl = nmcli d wifi connect $bssid password $pass &> /dev/null
 fi
+
+notify-send $resutl
 
 if [[ $? -eq 0 ]]; then
     notify-send "Wifi Conncted." "Connection stablished."

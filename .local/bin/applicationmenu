@@ -1,1 +1,1 @@
-rofi -show drun -theme /home/rbt/.config/rofi/themes/applications.rasi
+rofi -show drun -theme /home/rbt/.config/rofi/themes/application_menu.rasi

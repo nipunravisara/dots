@@ -17,11 +17,14 @@
   cyan:       #96b5b4;
   white:      #c0c5ce;
 
+  faded:      #697081;
+
   background-color: @background;
-  background-alt: #65737e;
+  background-alt: #313642;
+  foreground-color: @foreground;
   text-color: @foreground;
   border-color: @border;
-  selected-color: @green;
+  selected-color: @white;
   urgent-color: @red;
-  placeholder-color: @green;
+  placeholder-color: @faded;
 }

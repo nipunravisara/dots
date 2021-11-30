@@ -5,15 +5,15 @@ wallpapers_dir=~/Pictures/wallpapers/
 
 case $1 in
     --list)
-        new_wallpaper="$(find $wallpapers_dir -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" | rofi -dmenu -theme "$HOME/.config/rofi/themes/wifimenu.rasi")"
+        new_wallpaper="$(find $wallpapers_dir -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" | rofi -dmenu -theme "$HOME/.config/rofi/themes/menu.rasi")"
         if [[ ! -z "$new_wallpaper" ]] ; then
             rm -rf $default_dir/*
             cp $new_wallpaper $default_dir
         fi
-        xwallpaper --zoom "$(find "$default_dir" -type f -name "*.jpg" -o -name "*.png" | shuf -n1)"
+        xwallpaper --zoom "$(find "$default_dir" -type f -name "*.jpg" -o -name "*.png" | shuf -n1)" &> /dev/null
         ;;
     *)
-        xwallpaper --zoom "$(find "$default_dir" -type f -name "*.jpg" -o -name "*.png" | shuf -n1)"
+        xwallpaper --zoom "$(find "$default_dir" -type f -name "*.jpg" -o -name "*.png" | shuf -n1)" &> /dev/null
         ;;
 esac
 
