@@ -52,10 +52,10 @@ textbox-prompt-sub-title {
 listview {
     columns: 				1;
 	spacing:                0.5%;
-    lines: 					7;
-	dynamic:                true;
+	dynamic:                false;
 	layout:                 vertical;
 	margin:                 2% 0% 0% 0%;
+    fixed-height:           false;
 }
 
 element {
@@ -79,3 +79,4 @@ element-text selected {
  	background-color: 		@selected-color;
  	text-color: 			@background-color;
 }
+

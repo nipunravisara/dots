@@ -1,0 +1,21 @@
+#!/bin/bash
+
+user="${whoami}"
+control_options="\tShutdown\n\tReboot\n\tLogout"
+
+option=`echo -e $control_options | rofi -dmenu -theme /home/rbt/.config/rofi/themes/application_menu.rasi | awk '{print $1}' | tr -d '\r\n\t'`
+
+if [ "$@" ]
+then
+    case $@ in
+        *Logout)
+			pkill -KILL -u $user
+			;;
+		*Shutdown)
+			loginctl poweroff
+			;;
+		*Reboot)
+			loginctl reboot
+			;;
+	esac
+fi

@@ -22,8 +22,8 @@ function decrease_volume {
 }
 
 function mute_volume {
-  muted=$(pamixer --get-mute)
   pamixer -t
+  muted=$(pamixer --get-mute)
 
   if [ "$muted" == true ]; then
 	  dunstify -r "$notifcation_id" -u low -t 1000 "Muted"

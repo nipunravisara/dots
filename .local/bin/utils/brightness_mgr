@@ -8,16 +8,16 @@ function get_brightness {
 
 function send_notification {
   brightness=$(get_brightness)
-  dunstify -r "$notifcation_id" -u low -t 1000 "Brightness: $brightness%"
+   dunstify -r "$notifcation_id" -u low -t 1000 "Brightness: $brightness%"  
 }
 
 function increase_brightness {
-  xbacklight -inc 5
+  xbacklight -inc +5
   send_notification
 }
 
 function decrease_brightness {
-  xbacklight -dec 5
+  xbacklight -dec +5
   send_notification
 }
 
