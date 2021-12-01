@@ -37,7 +37,7 @@ fi
 xsetroot -cursor_name left_ptr &
 
 # Set wallpaper
-~/.fehbg &
+wallpaper_mgr
 
 # Start picom
 picom --experimental-backends &

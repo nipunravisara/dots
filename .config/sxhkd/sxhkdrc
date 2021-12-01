@@ -8,25 +8,25 @@ super + Escape
 super + Return
 	applicationmenu
 
-super + t
-	wallpaperswitcher
-
-super + w
-	wifimenu
+super + ctrl + w
+	wifi_menu
 
 super + a
 	alacritty
 
-super + d
-	devicemenu
+super + ctrl + d
+	device_menu
 
 super + b
 	brave
 
-super + s
-	screenshot
+super + ctrl + s
+	screenshot_mgr
 
-ctrl + super + backslash
+super + ctrl + p
+    power_mgr
+
+super + ctrl + backslash
   alacritty -e htop
 
 #------------------------ Audio, Brightness controls ------------------------

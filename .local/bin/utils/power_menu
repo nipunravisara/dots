@@ -3,11 +3,13 @@
 user="${whoami}"
 control_options="\tShutdown\n\tReboot\n\tLogout"
 
-option=`echo -e $control_options | rofi -dmenu -theme /home/rbt/.config/rofi/themes/application_menu.rasi | awk '{print $1}' | tr -d '\r\n\t'`
+#option=`echo -e $control_options | rofi -dmenu -theme /home/rbt/.config/rofi/themes/application_menu.rasi | awk '{print $1}' | tr -d '\r\n\t'`
 
-if [ "$@" ]
+option=`echo -e $control_options | rofi -dmenu -theme /home/rbt/.config/rofi/themes/application_menu.rasi`
+
+if [ "$option" ]
 then
-    case $@ in
+    case $option in
         *Logout)
 			pkill -KILL -u $user
 			;;

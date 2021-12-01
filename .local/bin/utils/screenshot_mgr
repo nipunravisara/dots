@@ -4,7 +4,11 @@ dir="$HOME/Pictures/Screenshots"
 
 fileName="$(rofi -dmenu -i -no-fixed-num-lines -p "File name: " -theme "$HOME/.config/rofi/themes/password.rasi")"
 
-sleep 1
+sleep 0.5
+
+if [ ! -d "$dir" ]; then
+    mkdir -p $dir
+fi
 
 scrot $dir/$fileName'.jpg'; dunstify -u low -t 1500 "Snapshot captured" "Saved in screenshots"
 
