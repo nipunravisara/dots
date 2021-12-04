@@ -61,15 +61,8 @@ label = %title:0:30:...%
 [module/date]
 type = internal/date
 interval = 5
-date =
-date-alt = " %Y/%m/%d"
-
-time = %H:%M
-time-alt = %H:%M:%S
-
-format-prefix = 
+time = %A%e %b / %I:%M %p
 format-prefix-foreground = ${colors.foreground}
-
 label = %date% %time%
 
 [module/cpu]
