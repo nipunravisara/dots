@@ -9,10 +9,10 @@ if [[ ! -z "$bssid" ]] ; then
 fi
 
 if [[ ! -z "$pass" ]]; then
-    resutl = nmcli d wifi connect $bssid password $pass &> /dev/null
+    resutl = nmcli d wifi connect $bssid password $pass | grep 'successfully' &> /dev/null
 fi
 
-if [[ $? -eq 0 ]]; then
+if [[ $resutl == 'successfully' ]]; then
     notify-send "Wifi Conncted." "Connection stablished."
     exit 0
 else

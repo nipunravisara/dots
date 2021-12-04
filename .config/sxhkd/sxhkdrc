@@ -23,9 +23,6 @@ super + b
 super + ctrl + s
 	screenshot_mgr
 
-super + ctrl + p
-    power_mgr
-
 super + ctrl + backslash
   alacritty -e htop
 
@@ -33,11 +30,11 @@ super + ctrl + backslash
 
 # Audio control
 XF86Audio{Mute,RaiseVolume,LowerVolume}
-	volume { --m, --inc, --dec}
+	volume_mgr { --m, --inc, --dec }
 
 # Backlight control
 XF86MonBrightness{Up,Down}
-	xbacklight {-inc 5,-dec 5}
+    brightness_mgr { --inc, --dec }
 
 #------------------------ Window controls ------------------------
 

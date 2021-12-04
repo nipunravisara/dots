@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d I II III IV V
+bspc monitor -d DEV WEB FILES MUSIC VID
 
 bspc config border_width         5
 bspc config window_gap          12

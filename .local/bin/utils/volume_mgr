@@ -1,6 +1,6 @@
 #! /bin/bash
 
-notifcation_id="22112"
+notifcation_id="2222"
 
 function get_volume {
   pamixer --get-volume
