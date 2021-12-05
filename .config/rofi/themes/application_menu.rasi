@@ -63,7 +63,7 @@ textbox-prompt-sub-title {
 }
 
 entry {
-	placeholder:			"Search";
+	placeholder:			" Search";
 	text-color: 			@foreground-color;
     font:                   "OverpassMono Nerd Font 25";
 	placeholder-color:      @placeholder-color;
