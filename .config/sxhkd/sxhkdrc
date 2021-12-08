@@ -11,6 +11,9 @@ super + Return
 super + ctrl + w
 	wifi_menu
 
+super + ctrl + b
+	bluetooth_mgr
+
 super + a
 	alacritty
 

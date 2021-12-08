@@ -1,0 +1,15 @@
+#! /bin/bash
+
+selected_device="$(bluetoothctl devices| sed -re 's,\s+, ,g' | cut -d ' ' -f 3- | sed 's/.*/  &/' | rofi -dmenu -theme "$HOME/.config/rofi/themes/theme-two/bluetooth_menu.rasi")"
+
+if [[ ! -z "$selected_device" ]] ; then
+	pass="$(bluetoothctl connect $selected_device)"
+fi
+
+if [[ $resutl == 'successfully' ]]; then
+    notify-send "Device Conncted." "Ready to use."
+    exit 0
+else
+    notify-send "Device not Conncted." "$result"
+    exit 1
+fi
