@@ -1,5 +1,5 @@
 import:
-  - ~/.local/colors/ocean/ocean.yml
+  - ~/.cache/wal/colors-alacritty.yml
 
 cursor:
   style: Block
@@ -38,7 +38,7 @@ window:
   
   dynamic_padding: true
 
-background_opacity: 1
+background_opacity: 0.5
 live_config_reload: true
 
 shell:

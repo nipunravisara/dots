@@ -20,11 +20,14 @@ super + a
 super + ctrl + d
 	device_menu
 
-super + b
+super + ctrl + b
 	brave
 
 super + ctrl + s
 	screenshot_mgr
+
+ctrl + shift backspace
+    power_menu
 
 super + ctrl + backslash
   alacritty -e htop
