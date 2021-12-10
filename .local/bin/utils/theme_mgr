@@ -1,0 +1,45 @@
+#! /bin/bash
+
+wallpaper="$(cat $HOME/.cache/wal/wal)"
+wallpaper_dir="$HOME/Pictures/wallpapers/"
+default_wallpaper="$()"
+selected_wallpaper=""
+password=""
+
+get_wallpaper() {
+    selected_wallpaper="$(ls $wallpaper_dir | rofi -dmenu -theme "$HOME/.config/rofi/themes/themes.rasi")"
+}
+
+get_password() {
+    password=$(rofi -dmenu -password -i -no-fixed-num-lines -p "Password: " -theme "$HOME/.config/rofi/themes/password.rasi")
+}
+
+set_wallpaper(){
+    if [[ ! -z "$selected_wallpaper" && ! -z "$password" ]]; then
+        wal -i $wallpaper_dir$selected_wallpaper -n -q
+        xwallpaper --zoom $wallpaper_dir$selected_wallpaper  &> /dev/null
+        (cd $HOME/dwm && echo "$password" | sudo -S make clean install)  &> /dev/null
+        dunstify "Successful" "Enjoy your new theme."
+    else
+        get_wallpaper
+        get_password
+        wal -i $wallpaper_dir$selected_wallpaper -n -q
+        xwallpaper --zoom $wallpaper_dir$selected_wallpaper &> /dev/null
+        (cd $HOME/dwm && echo "$password" | sudo -S make clean install)  &> /dev/null
+    fi
+}
+
+if [ "$1" == "--new" ]; then
+    get_wallpaper
+    if [[ ! -z "$selected_wallpaper" ]]; then
+        get_password
+        set_wallpaper
+    fi
+else
+    if [ -z "$wallpaper" ]; then
+        set_wallpaper
+    else
+        xwallpaper --zoom $wallpaper  &> /dev/null
+    fi
+fi
+

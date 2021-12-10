@@ -8,27 +8,35 @@ super + Escape
 super + Return
 	applicationmenu
 
+# Open wifi menu
 super + ctrl + w
 	wifi_menu
 
+# Open bluetooth menu
 super + ctrl + b
 	bluetooth_mgr
 
+# Open terminal
 super + a
 	alacritty
 
+# Open removable device menu
 super + ctrl + d
 	device_menu
 
+# Open browser
 super + ctrl + b
-	brave
+	firefox
 
+# Take a screenshot
 super + ctrl + s
 	screenshot_mgr
 
-ctrl + shift backspace
+# Open power menu
+ctrl + shift + Insert
     power_menu
 
+# Open system monitor
 super + ctrl + backslash
   alacritty -e htop
 
@@ -42,7 +50,57 @@ XF86Audio{Mute,RaiseVolume,LowerVolume}
 XF86MonBrightness{Up,Down}
     brightness_mgr { --inc, --dec }
 
-#------------------------ Window controls ------------------------
+#------------------------ DWM controls ------------------------
+
+# Focus windows
+super + {Left,Right}
+	dwmc focusstack {-,+}1
+
+# Move windows
+super + shift + {Left,Right}
+	dwmc movestack {-,+}1
+
+# Resize windows
+super + {Up,Down}
+	dwmc setmfact {-,+}0.05
+
+# Toggle dwmbar
+super + t
+	dwmc togglebar
+
+# Toggle floating mode
+super + f
+	dwmc togglefloating
+
+# Close window
+super + q
+	dwmc killclient
+
+# Quit from dwm
+super + shift + q
+	dwmc quit
+
+# View tab
+super + Tab
+	dwmc view
+
+# Change layouts
+super + {t,f,m}
+	dwmc setlayoutex {0,1,2}
+
+# Move windows to tags
+super + {_,ctrl +}{_,shift +} {1-9}
+	dwmc {_,toggle}{viewex,tagex} {0-8}
+
+# Show all windows
+super + 0
+	dwmc viewall
+
+# Change gaps
+super + {minus,plus}
+	dwmc setgaps {-,+}1
+
+#------------------------ BSPWM controls ------------------------
 
 # Close window
 super + q
