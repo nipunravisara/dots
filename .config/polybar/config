@@ -1,11 +1,11 @@
-include-file = ~/.local/colors/ocean/ocean.ini
+include-file = ~/.cache/wal/colors-wal-polybar.ini
 
 [bar/topbar]
 width = 100%
 height = 55
 fixed-center = true
 dpi = 210
-background = #0000
+background = ${colors.background}
 foreground = ${colors.foreground}
 
 padding-left = 1
@@ -14,8 +14,8 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = OverpassMono Nerd Font:pixelsize=10:style=Bold;12
-font-1 = icomoon\-feather:pixelsize=10;11
+font-0 = OverpassMono Nerd Font:pixelsize=10:style=Bold;6
+font-1 = icomoon\-feather:pixelsize=10;6
 
 modules-left = bspwm xwindow
 modules-center = date
@@ -44,19 +44,19 @@ type = internal/bspwm
 
 label-focused = %name%
 label-focused-padding = 1
-label-focused-foreground = ${colors.green} 
+label-focused-foreground = ${colors.focused} 
 
 label-occupied = %name%
 label-occupied-padding = 1
-label-occupied-foreground = ${colors.blue}
+label-occupied-foreground = ${colors.occupied}
 
 label-empty = %name%
 label-empty-padding = 1
-label-empty-foreground = ${colors.black}
+label-empty-foreground = ${colors.empty}
 
 label-urgent = %name%!
 label-urgent-padding = 1
-label-urgent-foreground = ${colors.yellow}
+label-urgent-foreground = ${colors.urgent}
 
 [module/xwindow]
 type = internal/xwindow
@@ -85,7 +85,6 @@ label-connected =  %essid%%downspeed:9%
 
 format-disconnected = <label-disconnected>
 label-disconnected = 
-label-disconnected-foreground = ${colors.red}
 
 [module/battery]
 type = internal/battery

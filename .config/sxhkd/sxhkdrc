@@ -51,54 +51,62 @@ XF86MonBrightness{Up,Down}
     brightness_mgr { --inc, --dec }
 
 #------------------------ DWM controls ------------------------
+#wm = "$wmctrl -m | grep "Name" | cut -d ":" -f2 "
+
+#if [ wm == "dwm"]; then
+#{
+
+# super + button1
+# 	dwmc moveWindow
 
 # Focus windows
-super + {Left,Right}
-	dwmc focusstack {-,+}1
+#uper + {Left,Right}
+#	dwmc focusstack {-,+}1
 
 # Move windows
-super + shift + {Left,Right}
-	dwmc movestack {-,+}1
+#super + shift + {Left,Right}
+#	dwmc movestack {-,+}1
 
 # Resize windows
-super + {Up,Down}
-	dwmc setmfact {-,+}0.05
+#super + {Up,Down}
+#	dwmc setmfact {-,+}0.05
 
 # Toggle dwmbar
-super + t
-	dwmc togglebar
+#super + t
+#	dwmc togglebar
 
 # Toggle floating mode
-super + f
-	dwmc togglefloating
+#super + f
+#	dwmc togglefloating
 
 # Close window
-super + q
-	dwmc killclient
+#super + q
+#	dwmc killclient
 
 # Quit from dwm
-super + shift + q
-	dwmc quit
+#super + shift + q
+#	dwmc quit
 
 # View tab
-super + Tab
-	dwmc view
+#super + Tab
+#	dwmc view
 
 # Change layouts
-super + {t,f,m}
-	dwmc setlayoutex {0,1,2}
+#super + {t,f,m}
+#	dwmc setlayoutex {0,1,2}
 
 # Move windows to tags
-super + {_,ctrl +}{_,shift +} {1-9}
-	dwmc {_,toggle}{viewex,tagex} {0-8}
+#super + {_,ctrl +}{_,shift +} {1-9}
+#	dwmc {_,toggle}{viewex,tagex} {0-8}
 
 # Show all windows
-super + 0
-	dwmc viewall
+#super + 0
+#	dwmc viewall
 
 # Change gaps
-super + {minus,plus}
-	dwmc setgaps {-,+}1
+#super + {minus,plus}
+#	dwmc setgaps {-,+}1
+}
 
 #------------------------ BSPWM controls ------------------------
 
@@ -115,7 +123,7 @@ super + {Left, Right}
  	bspc node -f {prev, next}.local.!above
 
 # Focus next window in the order
-alt + tab
+alt + Tab
     bspc node -f next.local
 
 # Focus other desktop

@@ -56,13 +56,13 @@ sxhkd & >/dev/null
 #dwmblocks & >/dev/null
 
 # polybar
-#~/.config/polybar/launch.sh & >/dev/null
+~/.config/polybar/launch.sh & >/dev/null
 
 # Start dwm
-#while type dwm >/dev/null ; do dwm && continue || break ; done
-exec dwm
+# while type dwm >/dev/null ; do dwm && continue || break ; done
+
 # Start herbstluftwm
 # exec herbstluftwm --locked >/dev/null
 
 # Start bspwm
-#exec bspwm >/dev/null
+exec bspwm >/dev/null
