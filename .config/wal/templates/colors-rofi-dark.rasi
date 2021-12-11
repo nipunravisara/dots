@@ -1,0 +1,22 @@
+* {{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+
+    font: "OverpassMono Nerd Font 20";
+    
+    background-color:                   {background};
+    background-alt:                     {color8};
+
+    foreground-color:                   {foreground};
+    text-color:                         {foreground};
+
+    selected-color:                     {color5}50;
+    selected-secondary-color:           {color5}03;
+    selected-alt:                       {color13};
+
+    border-color:                       {color15};
+    urgent-color:                       {color1};
+    faded-color:                        {color15}80;
+}}

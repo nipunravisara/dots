@@ -16,6 +16,10 @@ super + ctrl + w
 super + ctrl + b
 	bluetooth_mgr
 
+# Theme manager
+super + ctrl + t
+    theme_mgr --new
+
 # Open terminal
 super + a
 	alacritty
@@ -33,7 +37,7 @@ super + ctrl + s
 	screenshot_mgr
 
 # Open power menu
-ctrl + shift + Insert
+ctrl + shift + p
     power_menu
 
 # Open system monitor
