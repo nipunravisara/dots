@@ -1,0 +1,17 @@
+# Alias
+alias pp="poweroff"
+alias rr="reboot"
+alias ff="fetch"
+
+alias v="nvim"
+alias q="exit"
+alias m="udisksctl mount -b"
+alias u="udisksctl unmount -b"
+alias r="ranger"
+alias d="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias p="ping google.com"
+alias c="connmanctl"
+
+alias dcb="docker-compose build"
+alias dcu="docker-compose up"
+alias dcd="docker-compose down"
