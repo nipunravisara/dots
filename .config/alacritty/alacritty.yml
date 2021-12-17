@@ -14,18 +14,18 @@ scrolling:
 
 font:
   normal:
-    family: "OverpassMono Nerd Font"
+    family: "MesloLGS NF"
     style: Regular
 
   bold:
-    family: "OverpassMono Nerd Font"
+    family: "MesloLGS NF"
     style: Bold
     
   italic:
-    family: "OverpassMono Nerd Font"
+    family: "MesloLGS NF"
     style: Italic     
 
-  size: 12.0
+  size: 11.0
     
   offset:
     x: 0

@@ -14,7 +14,7 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = OverpassMono Nerd Font:pixelsize=10:style=Bold;6
+font-0 = MesloLGS NF:pixelsize=10:style=Bold;6
 font-1 = icomoon\-feather:pixelsize=10;6
 
 modules-left = bspwm xwindow

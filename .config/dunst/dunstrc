@@ -28,27 +28,6 @@ browser = /usr/bin/firefox -new-tab
 always_run_script = true
 title = Dunst
 class = Dunst
+corner_radius = 8
 
-[shortcuts]
-close = ctrl+space
-close_all = ctrl+shift+space
-history = ctrl+grave
-context = ctrl+shift+period
 
-[urgency_low]
-timeout = 1
-background = "#141c21"
-foreground = "#93a1a1"
-frame_color = "#8bc34a"
-
-[urgency_normal]
-timeout = 1
-background = "#141c21"
-foreground = "#93a1a1"
-frame_color = "#ba68c8"
-
-[urgency_critical]
-timeout = 1
-background = "#141c21"
-foreground = "#93a1a1"
-frame_color = "#ff7043"

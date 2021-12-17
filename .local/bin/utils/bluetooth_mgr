@@ -3,7 +3,9 @@
 selected_device="$(bluetoothctl devices| sed -re 's,\s+, ,g' | cut -d ' ' -f 3- | sed 's/.*/  &/' | rofi -dmenu -theme "$HOME/.config/rofi/themes/theme-two/bluetooth_menu.rasi")"
 
 if [[ ! -z "$selected_device" ]] ; then
-	pass="$(bluetoothctl connect $selected_device)"
+	dunstify "$selected_device"
+    pass="$(bluetoothctl connect $selected_device)"
+    dunstify "$pass"
 fi
 
 if [[ $resutl == 'successfully' ]]; then

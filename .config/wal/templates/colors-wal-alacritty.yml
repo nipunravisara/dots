@@ -9,7 +9,7 @@ colors:
     text: CellForeground
     cursor: "{cursor}"
   bright:
-    black: "{color0}"
+    black: "{color2}"
     red: "{color1}"
     green: "{color2}"
     yellow: "{color3}"

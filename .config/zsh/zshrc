@@ -10,6 +10,7 @@ plugins=(git zsh-autosuggestions)
 # Oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
+# Neovim
 source /usr/share/nvm/init-nvm.sh
 
 # Alias
