@@ -2,7 +2,7 @@ include-file = ~/.cache/wal/colors-wal-polybar.ini
 
 [bar/topbar]
 width = 100%
-height = 55
+height = 60
 fixed-center = true
 dpi = 210
 background = ${colors.background}
@@ -17,7 +17,7 @@ module-margin-right = 1
 font-0 = MesloLGS NF:pixelsize=10:style=Bold;6
 font-1 = icomoon\-feather:pixelsize=10;6
 
-modules-left = bspwm xwindow
+modules-left = ewmh xwindow
 modules-center = date
 modules-right = cpu network battery powermenu
 
@@ -39,8 +39,34 @@ scroll-down = bspwm-deskprev
 cursor = pointer
 cursor-click = pointer
 
+[module/ewmh]
+type = internal/xworkspaces
+pin-workspaces = true
+enable-click = true
+enable-scroll = false
+
+label-empty = %name%
+label-empty-foreground = ${colors.empty}
+label-empty-padding = 1
+
+label-active = %name%
+label-active-foreground = ${colors.focused} 
+label-active-padding = 1
+ 
+label-occupied = %name%
+label-occupied-foreground = ${colors.occupied}
+label-occupied-padding = 1
+ 
+label-urgent = %name%
+label-urgent-foreground = ${colors.urgent}
+label-urgent-padding = 1
+
 [module/bspwm]
 type = internal/bspwm
+
+label-empty = %name%
+label-empty-padding = 1
+label-empty-foreground = ${colors.empty}
 
 label-focused = %name%
 label-focused-padding = 1
@@ -49,10 +75,6 @@ label-focused-foreground = ${colors.focused}
 label-occupied = %name%
 label-occupied-padding = 1
 label-occupied-foreground = ${colors.occupied}
-
-label-empty = %name%
-label-empty-padding = 1
-label-empty-foreground = ${colors.empty}
 
 label-urgent = %name%!
 label-urgent-padding = 1

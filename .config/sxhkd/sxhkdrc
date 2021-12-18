@@ -178,21 +178,21 @@ super + {Left,Down,Up,Right}
 super + shift + {Left,Down,Up,Right}
     herbstclient shift {left,down,up,right}
 
-# Switch to tag
-super {1,2,3,4,5,6,7,8,9}
-    herbstclient use_index {1,2,3,4,5,6,7,8,9}
+# # Switch to tag
+# super {1,2,3,4,5}
+#     herbstclient use_index {1,2,3,4,5}
 
-# Move window to tag
-super + shift + {1,2,3,4,5,6,7,8,9}
-    herbstclient move_index {1,2,3,4,5,6,7,8,9}
+# # Move window to tag
+# super + shift + {1,2,3,4,5}
+#     herbstclient move_index {1,2,3,4,5}
 
 # Cycle forward through tags
 super  + Tab
-    herbstclient cycle_all +1
+    herbstclient use_index +1 --skip-visible
 
 # Cycle backward through tags
 super  + Shift + Tab
-    herbstclient cycle_all -1
+    herbstclient use_index -1 --skip-visible
 
 # Increase gap
 super + shift + equal
