@@ -1,32 +1,32 @@
 #!/bin/bash
+. "${HOME}/.cache/wal/colors.sh"
 
 hc() {
     herbstclient "$@"
 }
 
 # theme
-hc set frame_border_width 0
-hc set always_show_frame off
-hc set frame_gap 0
-hc set window_gap 20
 hc set frame_padding 0
-hc set smart_window_surroundings off
-hc set smart_frame_surroundings off
-hc set mouse_recenter_gap 0
+hc set frame_border_width 0
+hc set frame_active_opacity 1
+hc set frame_normal_opacity 1
+hc set frame_transparent_width 0
+hc set frame_bg_transparent 0
+hc set frame_gap 0
+hc set always_show_frame 0
+hc set smart_window_surroundings 0
+hc set smart_frame_surroundings 0
+hc set mouse_recenter_gap 1
+hc set window_gap 0
 
-hc attr theme.floating.reset 0
-hc attr theme.tiling.reset 0
-hc attr theme.title_height 0
-hc attr theme.padding_top 0
-hc attr theme.active.color '#FF4C29'
-#hc attr theme.normal.color '#FA8072'
-hc attr theme.urgent.color '#F0000'
-hc attr theme.border_width 3
-#hc attr theme.floating.border_width 0
-#hc attr theme.floating.padding_top 0
-#hc attr theme.floating.outer_width 0
-#hc attr theme.floating.outer_color "#262626"
-#hc attr theme.active.inner_color '#FF0000'
-#hc attr theme.active.outer_color '#FF0000'
-#hc attr theme.background_color '#FF0000'
+hc attr theme.tiling.reset 1
+hc attr theme.floating.reset 1
 
+hc attr theme.border_width 1
+hc attr theme.floating.border_width 1
+hc attr theme.urgent.border_width 1
+
+hc attr theme.active.color "$color2"
+hc attr theme.normal.color "$background"
+hc attr theme.urgent.color "$color15"
+hc attr theme.background_color  "$background"

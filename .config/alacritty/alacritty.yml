@@ -14,18 +14,18 @@ scrolling:
 
 font:
   normal:
-    family: "MesloLGS NF"
+    family: "Terminus"
     style: Regular
 
   bold:
-    family: "MesloLGS NF"
+    family: "Terminus"
     style: Bold
     
   italic:
-    family: "MesloLGS NF"
+    family: "Terminus"
     style: Italic     
 
-  size: 11.0
+  size: 12.0
     
   offset:
     x: 0

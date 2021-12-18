@@ -26,43 +26,35 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
-# start some nice programs
-#if [ -d /etc/X11/xinit/xinitrc.d ] ; then
-# for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
-#  [ -x "$f" ] && . "$f"
-# done
-# unset f
-#fi
-
 # Set cursor
-xsetroot -cursor_name left_ptr & >/dev/null
+xsetroot -cursor_name left_ptr & > /dev/null
 
 # Set wallpaper
-theme_mgr & >/dev/null
+theme_mgr & > /dev/null
 
 # Start picom
-picom --experimental-backends & >/dev/null
+picom --experimental-backends & > /dev/null
 
 # Start dunst 
-dunst & >/dev/null
+dunst & > /dev/null
 
 # Start sxhkd
-sxhkd & >/dev/null
+sxhkd & > /dev/null
 
 # Start eww
-#eww daemon & >/dev/null
+#eww daemon & > /dev/null
 
 # Start dwm blocks
-#dwmblocks & >/dev/null
+#dwmblocks & > /dev/null
 
 # polybar
-~/.config/polybar/launch.sh & >/dev/null
+# ~/.config/polybar/launch.sh & > /dev/null
 
 # Start dwm
-# while type dwm >/dev/null ; do dwm && continue || break ; done
+# while type dwm > /dev/null ; do dwm && continue || break ; done
 
 # Start herbstluftwm
-# exec herbstluftwm --locked >/dev/null
+exec herbstluftwm --locked > /dev/null
 
 # Start bspwm
-exec bspwm >/dev/null
+# exec bspwm > /dev/null
