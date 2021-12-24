@@ -5,43 +5,43 @@ super + Escape
 #------------------------ Application controls ------------------------
 
 # Open terminal
-super + Return
+alt + Return
 	applicationmenu
 
 # Open wifi menu
-super + ctrl + w
+alt + w
 	wifi_menu
 
 # Open bluetooth menu
-super + ctrl + b
+alt + b
 	bluetooth_mgr
 
 # Theme manager
-super + ctrl + t
+alt + t
     theme_mgr --new
 
 # Open terminal
-super + a
+alt + a
 	alacritty
 
 # Open removable device menu
-super + ctrl + d
+alt + d
 	device_menu
 
 # Open browser
-super + ctrl + b
+alt + b
 	firefox
 
 # Take a screenshot
-super + ctrl + s
+alt + s
 	screenshot_mgr
 
 # Open power menu
-ctrl + shift + p
+alt + p
     power_menu
 
 # Open system monitor
-super + ctrl + backslash
+alt + ctrl + backslash
   alacritty -e htop
 
 #------------------------ Audio, Brightness controls ------------------------
@@ -159,63 +159,63 @@ XF86MonBrightness{Up,Down}
 #------------------------ HERBSTLUFTWM controls ------------------------
 
 # Close window/application
-super + q
+alt + q
     herbstclient close
 
 # Realod herbstluftwm
-super + shift + r
+alt + shift + r
     herbstclient reload
 
 # Exit herbstluftwm
-super + shift + q
+alt + shift + q
     herbstclient quit
 
 # Focus windows
-super + {Left,Down,Up,Right}
+alt + {Left,Down,Up,Right}
     herbstclient {focus left,focus down,focus up,focus right}
 
 # Moving windows
-super + shift + {Left,Down,Up,Right}
+alt + shift + {Left,Down,Up,Right}
     herbstclient shift {left,down,up,right}
 
 # # Switch to tag
-# super {1,2,3,4,5}
+# alt {1,2,3,4,5}
 #     herbstclient use_index {1,2,3,4,5}
 
 # # Move window to tag
-# super + shift + {1,2,3,4,5}
+# alt + shift + {1,2,3,4,5}
 #     herbstclient move_index {1,2,3,4,5}
 
 # Cycle forward through tags
-super  + Tab
+alt  + Tab
     herbstclient use_index +1 --skip-visible
 
 # Cycle backward through tags
-super  + Shift + Tab
+alt  + shift + Tab
     herbstclient use_index -1 --skip-visible
 
 # Increase gap
-super + shift + equal
+alt + shift + equal
     herbstclient set frame_gap $(($(herbstclient get frame_gap) + 3))
 
 # Decrease gap
-super + shift + minus
+alt + shift + minus
     herbstclient set frame_gap $(($(herbstclient get frame_gap) - 3))
 
 # Reset gap
-super + shift + 0
+alt + shift + 0
     herbstclient set frame_gap 0
 
 # Shift client to specified monitor
-super + {apostrophe,section}
+alt + {apostrophe,section}
 herbstclient shift_to_monitor {1,0}
 
 # Layouting
-super + {r, @space, shift+f, shift+m, shift+p}
+alt + {r, @space, shift+f, shift+m, shift+p}
     herbstclient {remove, cycle_layout 1, floating toggle, fullscreen toggle, pseudotile toggle}
 
 # Window splitting
-super + {z,a,e}
+alt + {z,a,e}
     herbstclient split {bottom 0.5,right 0.5, explode}
 
 

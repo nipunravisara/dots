@@ -10,7 +10,7 @@ hc emit_hook reload
 hc keyunbind --all
 
 # # keybindings
-Mod=Mod4    # Use super as the main modifier
+Mod=Mod1    # Use super as the main modifier
 
 # # quti form wm
 # hc keybind $Mod-Shift-q quit

@@ -14,22 +14,22 @@ scrolling:
 
 font:
   normal:
-    family: "Terminus"
+    family: "Terminus (TTF)"
     style: Regular
 
   bold:
-    family: "Terminus"
+    family: "Terminus (TTF)"
     style: Bold
     
   italic:
-    family: "Terminus"
+    family: "Terminus (TTF)"
     style: Italic     
 
   size: 12.0
     
   offset:
     x: 0
-    y: 5
+    y: 0
 
 window:
   padding:

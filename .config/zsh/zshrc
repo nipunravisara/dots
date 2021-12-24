@@ -13,3 +13,5 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 source $HOME/.config/zsh/alias
 
+
+

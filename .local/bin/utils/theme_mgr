@@ -43,3 +43,5 @@ else
     fi
 fi
 
+wm="$(wmctrl -m | grep "Name" | cut -d ":" -f2)"
+dunstify "Welcome to $wm"
