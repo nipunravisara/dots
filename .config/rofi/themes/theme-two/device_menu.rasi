@@ -1,0 +1,82 @@
+configuration {
+	modi:				    "drun";
+	display-drun: 			"";
+	matching: 				"fuzzy";
+  	show-icons: 			false;
+	drun-display-format:    "{name}";
+	sidebar-mode: 			false;
+    icon-theme: 			"la-capitaine-icon-theme";
+  	drun-match-fields: 		"name,generic";
+}
+
+@import "~/.local/colors/ocean/ocean.rasi"
+
+window {
+	transparency:           "real";
+	width:			    	15%;
+    border-radius:          1% 0.6% 1% 0.6%;
+    location:               North East;
+    x-offset:               -25;        
+    y-offset:               25;
+}
+
+mainbox {
+    children:               [ element-left ];
+    orientation:            horizontal;
+	expand: 				false;
+	background-color: 		@background-color;
+	text-color: 			@foreground-color;
+}
+
+element-left {
+    children: 				[ textbox-prompt-title , textbox-prompt-sub-title, listview];
+    padding: 				2% 1.5%;
+    expand: 				true;
+}
+
+textbox-prompt-title {
+	str: 					" WIFI NETWORKS";
+	font:                   "OverpassMono Nerd Font 18";
+    text-style:             bold;    
+    margin:                 0.5% 0% 3% 0%;
+	expand: 				false;
+}
+
+textbox-prompt-sub-title {
+	str: 					"Choose a network";
+	font:                   "OverpassMono Nerd Font 18";
+    margin:                 1% 0% 0.2% 0%;
+	expand: 				false;
+}
+
+listview {
+    columns: 				1;
+	spacing:                0.5%;
+	dynamic:                false;
+	layout:                 vertical;
+	margin:                 2% 0% 0% 0%;
+    fixed-height:           false;
+}
+
+element {
+	orientation:            horizontal;
+  	padding: 				1.2% 0%;
+    border-radius:          1% 0.6% 1% 0.6%;
+}
+
+element-text {
+  	margin: 				0 0 0 1%;   
+  	vertical-align: 		0.5; 
+	expand:                 true;
+}
+
+element selected {
+	background-color: 		@selected-color;
+    border-radius:          1% 0.6% 1% 0.6%;
+}
+
+element-text selected {
+ 	background-color: 		@selected-color;
+ 	text-color: 			@background-color;
+}
+

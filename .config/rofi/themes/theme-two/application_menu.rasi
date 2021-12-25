@@ -1,0 +1,81 @@
+configuration {
+	modi:				    "drun";
+	display-drun: 			"";
+  	show-icons: 			true;
+	matching: 				"fuzzy";
+	drun-display-format:    "{name}";
+	sidebar-mode: 			false;
+    icon-theme: 			"la-capitaine-icon-theme";
+  	drun-match-fields: 		"name,generic";
+  	font: "OverpassMono Nerd Font 20";
+}
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+window {
+	transparency:           "real";
+	width:			    	22%;
+    border-radius:          1.6% 1% 1.6% 1%;
+}
+
+mainbox {
+    orientation:            vertical;
+	background-color: 		@background-color;
+	text-color: 			@text-color;
+	padding: 				0 0 40px 0;
+}
+
+element-left {
+    children: 				[ entry, listview];
+    expand: 				true;
+}
+
+entry {
+	placeholder:			" Search applications";
+	text-color: 			@foreground-color;
+    font:                   "OverpassMono Nerd Font 25";
+	placeholder-color:      @faded-color;
+	expand:                 false;
+    padding:                3.2% 0 1.8% 1.8%;
+}
+
+listview {
+    columns: 				1;
+	spacing:                0.5%;
+    lines: 					7;
+	dynamic:                true;
+	layout:                 vertical;
+	margin:                 2% 0% 0% 0%;
+}
+
+element {
+	orientation:            horizontal;
+  	padding: 				1.5%;
+}
+
+element-text {
+  	margin: 				0 0 0 1%;   
+  	vertical-align: 		0.5; 
+	expand:                 true;
+}
+
+element-icon {
+  	size: 					50;
+  	vertical-align: 		1.0;
+  	horizontal-align: 		1.0;
+}
+
+element selected {
+	background-color: 		@selected-color;
+	border: 				0 0 0 10px;
+	border-color: 			@selected-alt;
+	opacity: 0;
+}
+
+element-icon selected {
+ 	background-color: 		@selected-secondary-color;
+}
+
+element-text selected {
+ 	background-color: 		@selected-secondary-color;
+}
