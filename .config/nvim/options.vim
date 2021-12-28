@@ -1,0 +1,15 @@
+syntax on
+set t_Co=256
+set title
+set nu
+set numberwidth=5
+set hidden
+set autoindent
+set nohlsearch
+set mouse=a
+set tabstop=4
+set shiftwidth=4
+set noshowmode
+set ttimeoutlen=50
+set updatetime=40
+set foldlevel=3
