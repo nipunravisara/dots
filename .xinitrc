@@ -1,0 +1,1 @@
+/home/rbt/.config/x11/xinitrc

@@ -1,0 +1,1 @@
+/home/rbt/.config/zsh/zshrc
