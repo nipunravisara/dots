@@ -1,7 +1,7 @@
 # Defalut applications
 export EDITOR="nvim"
 export TERMINAL="alacritty"
-export BROWSER="firefox-developer-edition"
+export BROWSER="firefox"
 
 # Personal scripts path
 export PATH=$PATH:$HOME/.local/bin
@@ -20,12 +20,10 @@ export PATH=$PATH:~/.local/bin
 #export PATH="$HOME/eww/target/release:$PATH"
 
 # NVM path
-source /usr/share/nvm/init-nvm.sh
+#source /usr/share/nvm/init-nvm.sh
 
 # Yarn path
 export PATH="$PATH:`yarn global bin`"
-
-export GDK_SCALE=1
 
 # Start xorg
 startx
