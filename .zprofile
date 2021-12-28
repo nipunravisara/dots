@@ -1,1 +1,1 @@
-.config/zsh/zprofile
+/home/rbt/.config/zsh/zprofile
