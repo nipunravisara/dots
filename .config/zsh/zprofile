@@ -1,7 +1,7 @@
 # Defalut applications
 export EDITOR="nvim"
 export TERMINAL="alacritty"
-export BROWSER="firefox"
+export BROWSER="chromium"
 
 # Personal scripts path
 export PATH=$PATH:$HOME/.local/bin
