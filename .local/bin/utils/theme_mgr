@@ -2,16 +2,10 @@
 
 wallpaper="$(cat $HOME/.cache/wal/wal)"
 wallpaper_dir="$HOME/Pictures/Wallpapers/"
-default_wallpaper="$()"
 selected_wallpaper=""
-password=""
 
 get_wallpaper() {
-    selected_wallpaper="$(ls $wallpaper_dir | rofi -dmenu -theme "$HOME/.config/rofi/themes/themes.rasi")"
-}
-
-get_password() {
-    password=$(rofi -dmenu -password -i -no-fixed-num-lines -p "Password: " -theme "$HOME/.config/rofi/themes/password.rasi")
+    selected_wallpaper="$(ls $wallpaper_dir | rofi -dmenu -theme "$HOME/.config/rofi/themes/theme-two/themes_menu.rasi")"
 }
 
 set_wallpaper(){
@@ -24,18 +18,12 @@ set_wallpaper(){
 if [ "$1" == "--new" ]; then
     get_wallpaper
     if [[ ! -z "$selected_wallpaper" ]]; then
-        get_password
-    fi
-    if [[ ! -z "$password" ]]; then
         set_wallpaper
     fi
 else
     if [ -z "$wallpaper" ]; then
 	get_wallpaper
     	if [[ ! -z "$selected_wallpaper" ]]; then
-        	get_password
-    	fi
-    	if [[ ! -z "$password" ]]; then
         	set_wallpaper
     	fi
     else

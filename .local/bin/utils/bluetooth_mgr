@@ -1,6 +1,6 @@
 #! /bin/bash
 
-selected_device="$(bluetoothctl devices| sed -re 's,\s+, ,g' | cut -d ' ' -f 3- | sed 's/.*/  &/' | rofi -dmenu -theme "$HOME/.config/rofi/themes/theme-two/bluetooth_menu.rasi")"
+selected_device="$(bluetoothctl devices| sed -re 's,\s+, ,g' | cut -d ' ' -f 3- | sed 's/.*/     &/' | rofi -dmenu -theme "$HOME/.config/rofi/themes/theme-two/bluetooth_menu.rasi")"
 
 if [[ ! -z "$selected_device" ]] ; then
 	dunstify "$selected_device"

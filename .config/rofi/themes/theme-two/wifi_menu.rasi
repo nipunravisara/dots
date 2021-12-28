@@ -9,12 +9,12 @@ configuration {
   	drun-match-fields: 		"name,generic";
 }
 
-@import "~/.local/colors/kotoamatsukami/kotoamatsukami.rasi"
+@import "~/.cache/wal/colors-rofi-dark.rasi"
 
 window {
 	transparency:           "real";
 	width:			    	15%;
-    border-radius:          1% 0.6% 1% 0.6%;
+    border-radius:          1.6% 1% 1.6% 1%;
     location:               North East;
     x-offset:               -25;        
     y-offset:               75;
@@ -25,7 +25,7 @@ mainbox {
     orientation:            vertical;
 	expand: 				false;
 	background-color: 		@background-color;
-	text-color: 			@foreground-color;
+	text-color: 			@text-color;
 	margin:					0 0 1% 0;
 }
 
@@ -37,7 +37,7 @@ element-header {
 }
 
 textbox-title {
-	str: 					"Wifi Networks";
+	str: 					"Wifi networks";
 	font:                   "OverpassMono Nerd Font 20";
     text-style:             bold;    
 	expand: 				true;
@@ -73,14 +73,10 @@ element-text {
 
 element selected {
 	background-color: 		@selected-color;
-	border: 0 0 0 10px;
-	border-color: @selected-alt;
-}
-
-element-icon selected {
- 	background-color: 		@selected-color;
+	border: 				0 0 0 10px;
+	border-color: 			@selected-alt;
 }
 
 element-text selected {
- 	background-color: 		@selected-color;
+ 	background-color: 		@selected-secondary-color;
 }

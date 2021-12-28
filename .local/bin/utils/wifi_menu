@@ -1,6 +1,6 @@
 #! /bin/bash
 
-bssid="$(nmcli --fields "SSID" device wifi list  | sed -n '1!p' | sed 's/.*/   &/' | rofi -dmenu -theme "$HOME/.config/rofi/themes/theme-two/wifi_menu.rasi" | awk '{print $2}')"
+bssid="$(nmcli --fields "SSID" device wifi list  | sed -n '1!p' | sed 's/.*/     &/' | rofi -dmenu -theme "$HOME/.config/rofi/themes/theme-two/wifi_menu.rasi" | awk '{print $2}')"
 pass=""
 result=""
 
