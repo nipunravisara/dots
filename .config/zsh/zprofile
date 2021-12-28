@@ -7,9 +7,6 @@ export BROWSER="chromium"
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.local/bin/utils
 
-# Local path
-export PATH=$PATH:~/.local/bin
-
 # Emacs path
 #export PATH=$PATH:~/.emacs.d/bin
 
