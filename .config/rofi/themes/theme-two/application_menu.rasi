@@ -5,7 +5,7 @@ configuration {
 	matching: 				"fuzzy";
 	drun-display-format:    "{name}";
 	sidebar-mode: 			false;
-    icon-theme: 			"la-capitaine-icon-theme";
+    icon-theme: 			"papirus-icon-theme";
   	drun-match-fields: 		"name,generic";
   	font: "OverpassMono Nerd Font 20";
 }
