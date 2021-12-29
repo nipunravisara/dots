@@ -7,9 +7,9 @@ In this repository, you may discover color schemes and fonts used by all of the 
 
 ## Window managers
 
-- dwm: [go to my dwm build](https://github.com/nipunravisara/dwm) / [go to docs](https://dwm.suckless.org/)
-- bspwm: [go to docs](https://github.com/baskerville/bspwm)
-- herbstluftwm: [go to docs](https://herbstluftwm.org/)
+- dwm: [docs](https://dwm.suckless.org/)
+- bspwm: [docs](https://github.com/baskerville/bspwm)
+- herbstluftwm: [docs](https://herbstluftwm.org/)
 
 ## Package configs
 
@@ -17,10 +17,11 @@ In this repository, you may discover color schemes and fonts used by all of the 
 - picom: A lightweight compositor for X11.
 - alacritty: GPU accelerated terminal emulator.
 - eww: Elkowar’s Wacky Widgets.
-- ranger: vim-inspired filemanager.
+- ranger: Vim-inspired filemanager.
+- nvim: Hyperextensible Vim-based text editor.
 - rofi: A window switcher, application launcher and dmenu replacement.
-- afetch: Simple system info written in C.
-
+- pfetch: Simple system info written written in POSIX sh.
+- polybar: Top status bar.
 > **Note:** If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want.
 
 ## Screenshots
