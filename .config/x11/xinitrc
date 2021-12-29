@@ -33,7 +33,7 @@ xsetroot -cursor_name left_ptr & > /dev/null
 theme_mgr & > /dev/null
 
 # Start picom
-#picom --experimental-backends & > /dev/null
+picom --experimental-backends & > /dev/null
 
 # Start dunst 
 dunst & > /dev/null

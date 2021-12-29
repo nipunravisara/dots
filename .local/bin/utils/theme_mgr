@@ -5,7 +5,7 @@ wallpaper_dir="$HOME/Pictures/Wallpapers/"
 selected_wallpaper=""
 
 get_wallpaper() {
-    selected_wallpaper="$(ls $wallpaper_dir | rofi -dmenu -theme "$HOME/.config/rofi/themes/theme-two/themes_menu.rasi")"
+    selected_wallpaper="$(ls $wallpaper_dir | rofi -dmenu -theme "$HOME/.config/rofi/themes/theme-two/theme_menu.rasi")"
 }
 
 set_wallpaper(){
