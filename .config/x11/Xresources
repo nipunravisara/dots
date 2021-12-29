@@ -1,5 +1,5 @@
 Xft.dpi: 192
-Xcursor.theme: BreezeX-Dark
+Xcursor.theme: Neutral
 Xcursor.size: 64
 
 ! vim:ft=xdefaults
