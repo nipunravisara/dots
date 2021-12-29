@@ -1,17 +1,17 @@
 #!/bin/bash
 
 user="${whoami}"
-control_options="\tShutdown\n\tReboot\n\tLogout"
+control_options="   Shutdown\n   Reboot\n   Logout"
 
-#option=`echo -e $control_options | rofi -dmenu -theme /home/rbt/.config/rofi/themes/application_menu.rasi | awk '{print $1}' | tr -d '\r\n\t'`
+# option=`echo -e $control_options | rofi -dmenu -theme /home/rbt/.config/rofi/themes/theme-two/power_menu.rasi| awk '{print $1}' | tr -d '\r\n\t'`
 
-option=`echo -e $control_options | rofi -dmenu -theme /home/rbt/.config/rofi/themes/application_menu.rasi`
+option=`echo -e $control_options | rofi -dmenu -theme /home/rbt/.config/rofi/themes/theme-two/power_menu.rasi`
 
 if [ "$option" ]
 then
     case $option in
         *Logout)
-			pkill -KILL -u $user
+			loginctl kill-user "$user"
 			;;
 		*Shutdown)
 			loginctl poweroff

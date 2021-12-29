@@ -215,7 +215,7 @@ alt + {r, @space, shift+f, shift+m, shift+p}
     herbstclient {remove, cycle_layout 1, floating toggle, fullscreen toggle, pseudotile toggle}
 
 # Window splitting
-alt + {z,a,e}
+alt + {v,h,e}
     herbstclient split {bottom 0.5,right 0.5, explode}
 
 

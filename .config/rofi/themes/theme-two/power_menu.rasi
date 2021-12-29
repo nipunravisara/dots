@@ -1,0 +1,82 @@
+configuration {
+	modi:				    "drun";
+	display-drun: 			"";
+	matching: 				"fuzzy";
+  	show-icons: 			false;
+	drun-display-format:    "{name}";
+	sidebar-mode: 			false;
+    icon-theme: 			"la-capitaine-icon-theme";
+  	drun-match-fields: 		"name,generic";
+}
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+window {
+	transparency:           "real";
+	width:			    	12%;
+    border-radius:          1.6% 1% 1.6% 1%;
+    location:               North East;
+    x-offset:               -25;        
+    y-offset:               75;
+}
+
+mainbox {
+    children:               [ element-header, listview ];
+    orientation:            vertical;
+	expand: 				false;
+	background-color: 		@background-color;
+	text-color: 			@text-color;
+	margin:					0 0 1% 0;
+}
+
+element-header {
+    children: 				[ textbox-title , textbox-icon ];
+	orientation:           	horizontal;
+    padding: 				2% 1.5% 0% 1.5%;
+    expand: 				false;
+}
+
+textbox-title {
+	str: 					"Power menu";
+	font:                   "OverpassMono Nerd Font 20";
+    text-style:             bold;    
+	expand: 				true;
+	vertical-align: 		2;
+}
+
+textbox-icon {
+	str: 					"";
+	font:                   "OverpassMono Nerd Font 28";
+    text-style:             bold;    
+	expand: 				false;
+}
+
+listview {
+    columns: 				1;
+	spacing:                0.5%;
+	dynamic:                false;
+	layout:                 vertical;
+	margin:                 2% 0% 0% 0%;
+    fixed-height:           false;
+}
+
+element {
+	orientation:            horizontal;
+  	padding: 				1.5%;
+}
+
+element-text {
+  	margin: 				0 0 0 1%;   
+  	vertical-align: 		0.5; 
+	expand:                 true;
+}
+
+element selected {
+	background-color: 		@selected-color;
+	border: 				0 0 0 10px;
+	border-color: 			@selected-alt;
+}
+
+element-text selected {
+ 	background-color: 		@selected-secondary-color;
+}

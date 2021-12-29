@@ -4,7 +4,7 @@
     padding: 0;
     spacing: 0;
 
-    font: "MesloLGS NF 20";
+    font: "OverpassMono Nerd Font 20";
     
     background-color:                   {background};
     background-alt:                     {color8};
@@ -12,8 +12,8 @@
     foreground-color:                   {foreground};
     text-color:                         {foreground};
 
-    selected-color:                     {color5}40;
-    selected-secondary-color:           {color5}03;
+    selected-color:                     {color5}10;
+    selected-secondary-color:           {color5}01;
     selected-alt:                       {color13};
 
     border-color:                       {color15};
