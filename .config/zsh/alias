@@ -1,7 +1,7 @@
 # Alias
-alias pp="poweroff"
-alias rr="reboot"
-alias ff="fetch"
+alias pp="loginctl poweroff"
+alias rr="loginctl reboot"
+alias ff="pfetch"
 
 alias v="nvim"
 alias q="exit"
@@ -9,8 +9,9 @@ alias m="udisksctl mount -b"
 alias u="udisksctl unmount -b"
 alias r="ranger"
 alias d="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-alias p="ping google.com"
+alias p="pulsemixer"
 alias c="connmanctl"
+alias b="bluetoothctl"
 
 alias dcb="docker-compose build"
 alias dcu="docker-compose up"
