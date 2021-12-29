@@ -15,9 +15,8 @@ window {
 	transparency:           "real";
 	width:			    	15%;
     border-radius:          1.6% 1% 1.6% 1%;
-    location:               North East;
-    x-offset:               -25;        
-    y-offset:               75;
+    location:               Center;
+    y-offset:               -10%;
 }
 
 mainbox {
@@ -45,7 +44,7 @@ textbox-title {
 }
 
 textbox-icon {
-	str: 					"";
+	str: 					"";
 	font:                   "OverpassMono Nerd Font 28";
     text-style:             bold;    
 	expand: 				false;
