@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Reload herbstluftwm
+herbstclient reload
+
+# Reload dunst
+pkill dunst
+ln -sf ~/.cache/wal/colors-wal-dunst ~/.config/dunst/dunstrc
+dunst &
