@@ -12,7 +12,6 @@ set_wallpaper(){
     wal -i $wallpaper_dir$selected_wallpaper -o wal-refresh -n -q
     xwallpaper --zoom $wallpaper_dir$selected_wallpaper  &> /dev/null
     #(cd $HOME/dwm && echo "$password" | sudo -S make clean install)  &> /dev/null
-    dunstify "Successful" "Enjoy your new theme."
 }
 
 if [ "$1" == "--new" ]; then
@@ -20,6 +19,7 @@ if [ "$1" == "--new" ]; then
     if [[ ! -z "$selected_wallpaper" ]]; then
         set_wallpaper
     fi
+	dunstify "New theme applied."
 else
     if [ -z "$wallpaper" ]; then
 	get_wallpaper
@@ -29,7 +29,8 @@ else
     else
         xwallpaper --zoom $wallpaper  &> /dev/null
     fi
+	wm="$(wmctrl -m | grep "Name" | cut -d ":" -f2)"
+	dunstify "Welcome to $wm"
 fi
 
-wm="$(wmctrl -m | grep "Name" | cut -d ":" -f2)"
-dunstify "Welcome to $wm"
+
