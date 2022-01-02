@@ -3,26 +3,34 @@
 wallpaper="$(cat $HOME/.cache/wal/wal)"
 wallpaper_dir="$HOME/Pictures/Wallpapers/"
 selected_wallpaper=""
+password=""
 
 get_wallpaper() {
     selected_wallpaper="$(ls $wallpaper_dir | rofi -dmenu -theme "$HOME/.config/rofi/themes/theme-two/theme_menu.rasi")"
 }
 
+get_password() {
+    password="$(rofi -dmenu -password -i -no-fixed-num-lines -p "Password: " -theme "$HOME/.config/rofi/themes/password.rasi")"
+}
+
 set_wallpaper(){
     wal -i $wallpaper_dir$selected_wallpaper -o wal-refresh -n -q
     xwallpaper --zoom $wallpaper_dir$selected_wallpaper  &> /dev/null
-    #(cd $HOME/dwm && echo "$password" | sudo -S make clean install)  &> /dev/null
+
+    (cd $HOME/dwm && echo "$password" | sudo -S make clean install)  &> /dev/null
 }
 
 if [ "$1" == "--new" ]; then
     get_wallpaper
+    get_password
     if [[ ! -z "$selected_wallpaper" ]]; then
         set_wallpaper
     fi
 	dunstify "New theme applied."
 else
     if [ -z "$wallpaper" ]; then
-	get_wallpaper
+	  get_wallpaper
+    get_password
     	if [[ ! -z "$selected_wallpaper" ]]; then
         	set_wallpaper
     	fi

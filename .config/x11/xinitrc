@@ -39,22 +39,22 @@ picom --experimental-backends & > /dev/null
 dunst & > /dev/null
 
 # Start sxhkd
-sxhkd & > /dev/null
+#sxhkd & > /dev/null
 
 # Start eww
-#eww daemon & > /dev/null
+eww daemon & > /dev/null
 
 # Start dwm blocks
-#dwmblocks & > /dev/null
+# dwmblocks & > /dev/null
 
 # polybar
-~/.config/polybar/launch.sh & > /dev/null
+# ~/.config/polybar/launch.sh & > /dev/null
 
 # Start dwm
-# while type dwm > /dev/null ; do dwm && continue || break ; done
+while type dwm > /dev/null ; do dwm && continue || break ; done
 
 # Start herbstluftwm
-exec herbstluftwm --locked > /dev/null
+#exec herbstluftwm --locked > /dev/null
 
 # Start bspwm
-# exec bspwm > /dev/null
+#exec bspwm > /dev/null
