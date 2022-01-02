@@ -12,7 +12,7 @@ export PATH=$PATH:$HOME/.local/bin/helpers
 #export PATH=$PATH:~/.emacs.d/bin
 
 # Rust path
-export PATH="$HOME/.cargo/bin:$PATH"
+#export PATH="$HOME/.cargo/bin:$PATH"
 
 # Eww path
 export PATH="$HOME/eww/target/release:$PATH"
