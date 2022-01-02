@@ -1,0 +1,61 @@
+(defwidget bar []
+  (centerbox :orientation "h"
+    (leftsidegroup)
+    (workspaces)
+    (rightsidegroup)
+  )
+)
+
+(defwidget leftsidegroup []
+  (box :class "rightsidegroup" :orientation "h" :space-evenly false :halign "start"
+    (metric :label "" :value volume)
+    (metric :label "" :value {EWW_RAM.used_mem_perc})
+    (metric :label "" :value {round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)})
+   )
+)
+
+(defwidget rightsidegroup []
+  (box :class "leftsidegroup" :orientation "h" :space-evenly false :halign "end" time)
+)
+
+(defwidget workspaces []
+  (box :class "workspaces"
+       :orientation "h"
+       :space-evenly true
+       :halign "start"
+       :spacing 40
+    (button :onclick "wmctrl -s 0" "DEV")
+    (button :onclick "wmctrl -s 1" "WEB")
+    (button :onclick "wmctrl -s 2" "DIR")
+    (button :onclick "wmctrl -s 3" "MUS")
+    (button :onclick "wmctrl -s 4" "TEL")
+  )
+)
+
+(defwidget metric [label value]
+  (box :orientation "h"
+       :class "metric"
+       :space-evenly false
+    (box :class "label" label)
+    (box :class "value" value)
+  )
+)
+
+(defpoll volume :interval "1s"
+  "pamixer --get-volume")
+
+(defpoll time :interval "10s"
+  "date '+%H:%M %b %d, %Y'")
+
+(defwindow bar
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry 
+                      :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "60px"
+                      :anchor "top center")
+  :reserve (struts :side "top" :distance "60px")
+  (bar)
+)
