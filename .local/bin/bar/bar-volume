@@ -1,0 +1,9 @@
+#!/bin/sh
+device="墳"
+volume="$(pamixer --get-volume)"
+
+if pamixer --get-default-sink | grep -q "bluez_sink"; then
+    device=""
+fi
+
+printf "$device$volume"

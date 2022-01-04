@@ -1,0 +1,7 @@
+#!/bin/sh
+
+icon="神"
+time="$(date "+%I:%M")"
+# date "+%a %d %b, %I:%M %P"
+
+printf "$icon$time"

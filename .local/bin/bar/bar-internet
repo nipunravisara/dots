@@ -1,0 +1,10 @@
+#!/bin/sh
+
+device="睊"
+network="$(nmcli -t -f NAME c s -a | head -n 1)"
+
+if nmcli -o | grep -q "wlan0: connected to"; then
+    device=""
+fi
+
+printf "$device$network"
