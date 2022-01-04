@@ -5,6 +5,7 @@ export BROWSER="chromium"
 
 # Personal scripts path
 export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.local/bin/bar
 export PATH=$PATH:$HOME/.local/bin/utils
 export PATH=$PATH:$HOME/.local/bin/helpers
 

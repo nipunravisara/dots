@@ -39,13 +39,13 @@ picom --experimental-backends & > /dev/null
 dunst & > /dev/null
 
 # Start sxhkd
-#sxhkd & > /dev/null
+sxhkd & > /dev/null
 
 # Start eww
 eww daemon & > /dev/null
 
 # Start dwm blocks
-# dwmblocks & > /dev/null
+dwmblocks & > /dev/null
 
 # polybar
 # ~/.config/polybar/launch.sh & > /dev/null

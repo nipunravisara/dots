@@ -31,7 +31,7 @@ element-left {
 }
 
 entry {
-	placeholder:			" Search applications";
+	placeholder:			" Search applications";
 	text-color: 			@foreground-color;
     font:                   "OverpassMono Nerd Font 25";
 	placeholder-color:      @faded-color;

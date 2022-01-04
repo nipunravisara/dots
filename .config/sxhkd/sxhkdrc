@@ -56,104 +56,100 @@ XF86MonBrightness{Up,Down}
 
 
 #------------------------ DWM controls ------------------------
-#wm = "$wmctrl -m | grep "Name" | cut -d ":" -f2 "
 
-#if [ wm == "dwm"]; then
-#{
-
-# super + button1
-# 	dwmc moveWindow
+alt + button1
+	dwmc moveWindow
 
 # Focus windows
-#uper + {Left,Right}
-#	dwmc focusstack {-,+}1
+alt + {Left,Right}
+	dwmc focusstack {-,+}1
 
 # Move windows
-#super + shift + {Left,Right}
-#	dwmc movestack {-,+}1
+alt + shift + {Left,Right}
+	dwmc movestack {-,+}1
 
 # Resize windows
-#super + {Up,Down}
-#	dwmc setmfact {-,+}0.05
+alt + {Up,Down}
+	dwmc setmfact {-,+}0.05
 
 # Toggle dwmbar
-#super + t
-#	dwmc togglebar
+alt + t
+	dwmc togglebar
 
 # Toggle floating mode
-#super + f
-#	dwmc togglefloating
-
-# Close window
-#super + q
-#	dwmc killclient
-
-# Quit from dwm
-#super + shift + q
-#	dwmc quit
-
-# View tab
-#super + Tab
-#	dwmc view
-
-# Change layouts
-#super + {t,f,m}
-#	dwmc setlayoutex {0,1,2}
-
-# Move windows to tags
-#super + {_,ctrl +}{_,shift +} {1-9}
-#	dwmc {_,toggle}{viewex,tagex} {0-8}
-
-# Show all windows
-#super + 0
-#	dwmc viewall
-
-# Change gaps
-#super + {minus,plus}
-#	dwmc setgaps {-,+}1
-}
-
-#------------------------ BSPWM controls ------------------------
+alt + f
+	dwmc togglefloating
 
 # Close window
 alt + q
-	bspc node -c
+	dwmc killclient
 
-# Set the window state
-alt + {t,s,f}
-	bspc node -t {tiled,,floating,fullscreen}
+# Quit from dwm
+alt + shift + q
+	dwmc quit
 
-# Focus next/previous window
-alt + {Left, Right}
- 	bspc node -f {prev, next}.local.!above
-
-# Focus next window in the order
+# View tab
 alt + Tab
-    bspc node -f next.local:
+	dwmc view
 
-# Focus other desktop
-alt + {1-9, 0}
- 	bspc desktop -f focused:'^{1-9,10}'
+# Change layouts
+alt + shift + {t,f,m}
+	dwmc setlayoutex {0,1,2}
 
-# Move window to other desktop
-alt + shift + {1-9, 0}
- 	bspc node -d focused:'^{1-9, 10}'
+# Move windows to tags
+alt + {_,ctrl +}{_,shift +} {1-9}
+	dwmc {_,toggle}{viewex,tagex} {0-8}
 
-# Resize a window
-alt + shift + {Left,Right,Up,Down}
-	bspc node -z {left -20 0, left 20 0, top 0 -20, top 0 20}
+# Show all windows
+alt + 0
+	dwmc viewall
 
-# Expand a window by moving one of its side outward
-alt + shift + {Left,Down,Up,Right}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+# Change gaps
+alt + {minus,plus}
+	dwmc setgaps {-,+}1
 
-# Contract a window by moving one of its side inward
-#alt + shift + shift + {Left,Down,Up,Right}
-#	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
-# Exit bspwm
-alt + shift + {q, w}
-	bspc {quit, wm -r}
+#------------------------ BSPWM controls ------------------------
+
+# # Close window
+# alt + q
+# 	bspc node -c
+
+# # Set the window state
+# alt + {t,s,f}
+# 	bspc node -t {tiled,,floating,fullscreen}
+
+# # Focus next/previous window
+# alt + {Left, Right}
+#  	bspc node -f {prev, next}.local.!above
+
+# # Focus next window in the order
+# alt + Tab
+#     bspc node -f next.local:
+
+# # Focus other desktop
+# alt + {1-9, 0}
+#  	bspc desktop -f focused:'^{1-9,10}'
+
+# # Move window to other desktop
+# alt + shift + {1-9, 0}
+#  	bspc node -d focused:'^{1-9, 10}'
+
+# # Resize a window
+# alt + shift + {Left,Right,Up,Down}
+# 	bspc node -z {left -20 0, left 20 0, top 0 -20, top 0 20}
+
+# # Expand a window by moving one of its side outward
+# alt + shift + {Left,Down,Up,Right}
+# 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# # Contract a window by moving one of its side inward
+# #alt + shift + shift + {Left,Down,Up,Right}
+# #	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# # Exit bspwm
+# alt + shift + {q, w}
+# 	bspc {quit, wm -r}
 
 
 #------------------------ HERBSTLUFTWM controls ------------------------
