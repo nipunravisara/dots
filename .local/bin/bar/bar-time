@@ -1,6 +1,6 @@
 #!/bin/sh
 
-icon="神"
+icon=""
 time="$(date "+%I:%M")"
 # date "+%a %d %b, %I:%M %P"
 

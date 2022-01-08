@@ -3,8 +3,8 @@
 device="睊"
 network="$(nmcli -t -f NAME c s -a | head -n 1)"
 
-if nmcli -o | grep -q "wlan0: connected to"; then
-    device=""
+if nmcli -o | grep -q "wlan0: connected"; then
+    device="直"
 fi
 
 printf "$device$network"

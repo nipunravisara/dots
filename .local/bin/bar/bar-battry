@@ -4,29 +4,29 @@ read -r bat_status </sys/class/power_supply/BAT0/status
 read -r bat_capacity </sys/class/power_supply/BAT0/capacity
 
 if [ "$bat_status" = "Charging" ]; then
-	bat_status=""
+	bat_status_icon=""
 elif [ "$bat_capacity" -gt 98 ]; then
-	bat_status="-"
+	bat_status_icon=""
 elif [ "$bat_capacity" -gt 90 ]; then
-	bat_status=""
+	bat_status_icon=""
 elif [ "$bat_capacity" -gt 80 ]; then
-	bat_status=""
+	bat_status_icon=""
 elif [ "$bat_capacity" -gt 70 ]; then
-	bat_status=""
+	bat_status_icon=""
 elif [ "$bat_capacity" -gt 60 ]; then
-	bat_status=""
+	bat_status_icon=""
 elif [ "$bat_capacity" -gt 50 ]; then
-	bat_status=""
+	bat_status_icon=""
 elif [ "$bat_capacity" -gt 40 ]; then
-	bat_status=""
+	bat_status_icon=""
 elif [ "$bat_capacity" -gt 30 ]; then
-	bat_status=""
+	bat_status_icon=""
 elif [ "$bat_capacity" -gt 20 ]; then
-	bat_status=""
+	bat_status_icon=""
 elif [ "$bat_capacity" -gt 10 ]; then
-	bat_status=""
+	bat_status_icon=""
 else 
-	bat_status=""
+	bat_status_icon=""
 fi
 
-printf "$bat_status$bat_capacity"
+echo "$bat_status_icon$bat_capacity"
