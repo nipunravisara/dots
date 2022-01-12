@@ -1,7 +1,13 @@
 #!/bin/sh
 
-# Reload herbstluftwm
-herbstclient reload
+running_wm="$(wmctrl -m | grep "Name" | cut -d ":" -f2)"
+
+# Reload window manager
+if [ "$running_wm" == "dwm" ]; then
+    dwmc quit
+else if [ "$running_wm" == "herbstluftwm" ]; then
+    herbstclient reload
+fi
 
 # Reload dunst
 pkill dunst

@@ -26,6 +26,8 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
+export _JAVA_AWT_WM_NONREPARENTING=1
+
 # Set cursor
 xsetroot -cursor_name left_ptr & > /dev/null
 
@@ -48,13 +50,13 @@ eww daemon & > /dev/null
 dwmblocks & > /dev/null
 
 # polybar
-# ~/.config/polybar/launch.sh & > /dev/null
+~/.config/polybar/launch.sh & > /dev/null
 
 # Start dwm
-while type dwm > /dev/null ; do dwm && continue || break ; done
+# while type dwm > /dev/null ; do dwm && continue || break ; done
 
 # Start herbstluftwm
-#exec herbstluftwm --locked > /dev/null
+exec herbstluftwm --locked > /dev/null
 
 # Start bspwm
 #exec bspwm > /dev/null
