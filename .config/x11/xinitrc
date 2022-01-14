@@ -5,49 +5,49 @@ usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
-#xrandr
+xrandr
 
 # merge in defaults and keymaps
 xrdb -merge ~/.Xresources
 
-if [ -f $sysresources ]; then
-    xrdb -merge $sysresources
-fi
+# if [ -f $sysresources ]; then
+#     xrdb -merge $sysresources
+# fi
 
-if [ -f $sysmodmap ]; then
-    xmodmap $sysmodmap
-fi
+# if [ -f $sysmodmap ]; then
+#     xmodmap $sysmodmap
+# fi
 
-if [ -f "$userresources" ]; then
-    xrdb -merge "$userresources"
-fi
+# if [ -f "$userresources" ]; then
+#     xrdb -merge "$userresources"
+# fi
 
-if [ -f "$usermodmap" ]; then
-    xmodmap "$usermodmap"
-fi
+# if [ -f "$usermodmap" ]; then
+#     xmodmap "$usermodmap"
+# fi
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Set cursor
-xsetroot -cursor_name left_ptr & > /dev/null
+xsetroot -cursor_name left_ptr & >/dev/null
 
 # Set wallpaper
-theme_mgr & > /dev/null
+theme_mgr & >/dev/null
 
 # Start picom
-picom --experimental-backends & > /dev/null
+picom --experimental-backends & >/dev/null
 
-# Start dunst 
-dunst & > /dev/null
+# Start dunst
+dunst & >/dev/null
 
 # Start sxhkd
-sxhkd & > /dev/null
+sxhkd & >/dev/null
 
 # Start eww
-eww daemon & > /dev/null
+#eww daemon & > /dev/null
 
 # Start dwm blocks
-dwmblocks & > /dev/null
+# dwmblocks & > /dev/null
 
 # polybar
 ~/.config/polybar/launch.sh & > /dev/null
@@ -56,7 +56,7 @@ dwmblocks & > /dev/null
 # while type dwm > /dev/null ; do dwm && continue || break ; done
 
 # Start herbstluftwm
-exec herbstluftwm --locked > /dev/null
+# exec herbstluftwm --locked >/dev/null
 
 # Start bspwm
-#exec bspwm > /dev/null
+exec bspwm > /dev/null
