@@ -52,6 +52,8 @@ sxhkd & >/dev/null
 # polybar
 ~/.config/polybar/launch.sh & > /dev/null
 
+pulseaudio --kill
+pulseaudio --start &
 # Start dwm
 # while type dwm > /dev/null ; do dwm && continue || break ; done
 

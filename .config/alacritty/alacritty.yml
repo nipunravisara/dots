@@ -38,7 +38,7 @@ window:
   
   dynamic_padding: true
 
-background_opacity: 0.9
+background_opacity: 0.8
 live_config_reload: true
 
 shell:

@@ -22,7 +22,7 @@ set_wallpaper(){
 
 if [ "$1" == "--new" ]; then
     get_wallpaper
-    get_password
+    #get_password
     if [[ ! -z "$selected_wallpaper" ]]; then
         set_wallpaper
     fi
@@ -30,7 +30,7 @@ if [ "$1" == "--new" ]; then
 else
     if [ -z "$wallpaper" ]; then
 	  get_wallpaper
-    get_password
+    #get_password
     	if [[ ! -z "$selected_wallpaper" ]]; then
         	set_wallpaper
     	fi
