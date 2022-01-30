@@ -14,12 +14,12 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = OverpassMono Nerd Font:pixelsize=10;5
+font-0 = OverpassMono Nerd Font:style=Bold:pixelsize=10;5
 font-1 = icomoon\-feather:pixelsize=10;6
 
 modules-left = cpu network battery
 modules-center = ewmh
-modules-right = date powermenu
+modules-right = date
 
 tray-detached = false
 tray-align = center
@@ -115,32 +115,6 @@ full-at = 98
 format-charging =  <label-charging>
 format-discharging =  <label-discharging>
 format-full-prefix = " "
-
-[module/powermenu]
-type = custom/menu
-
-expand-right = true
-
-format-spacing = 1
-
-label-open = 
-label-close = 
-label-separator = /
-
-menu-0-0 = Reboot
-menu-0-0-exec = #powermenu.open.1
-menu-0-1 = Power off
-menu-0-1-exec = #powermenu.open.2
-
-menu-1-0 = Cancel
-menu-1-0-exec = #powermenu.open.0
-menu-1-1 = Reboot
-menu-1-1-exec = loginctl reboot
-
-menu-2-0 = Cancel
-menu-2-0-exec = #powermenu.open.0
-menu-2-1 = Power off
-menu-2-1-exec = loginctl poweroff
 
 [settings]
 screenchange-reload = true

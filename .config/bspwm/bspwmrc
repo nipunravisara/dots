@@ -2,10 +2,11 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d DEV WEB FILES MUSIC VID
+# bspc monitor -d DEV WEB FILES MUSIC VID
+bspc monitor -d      
 
 bspc config border_width         1
-bspc config window_gap           0
+bspc config window_gap           10
 
 bspc config split_ratio          0.50
 bspc config borderless_monocle   true

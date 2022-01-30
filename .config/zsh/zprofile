@@ -1,16 +1,13 @@
 # Defalut applications
 export EDITOR="nvim"
 export TERMINAL="alacritty"
-export BROWSER="chromium"
+export BROWSER="firefox-developer-edition"
 
 # Personal scripts path
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.local/bin/bar
 export PATH=$PATH:$HOME/.local/bin/utils
 export PATH=$PATH:$HOME/.local/bin/helpers
-
-# Emacs path
-#export PATH=$PATH:~/.emacs.d/bin
 
 # Rust path
 #export PATH="$HOME/.cargo/bin:$PATH"
@@ -24,8 +21,10 @@ source /usr/share/nvm/init-nvm.sh
 # Yarn path
 export PATH="$PATH:`yarn global bin`"
 
+# Java AWT
 export _JAVA_AWT_WM_NONREPARENTING=1
 
+# Android SDK
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
@@ -33,5 +32,5 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Start xorg
-#startx
+startx
 

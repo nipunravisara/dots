@@ -15,14 +15,14 @@ scrolling:
 font:
   normal:
     family: "OverpassMono Nerd Font"
-    style: Regular
+    style: Reqular
 
   bold:
     family: "OverpassMono Nerd Font"
     style: Bold
     
   italic:
-    family: "OverpassMono Nerd Font"
+    family: "TerminessTTF Nerd Font MonoZ"
     style: Italic     
 
   size: 12.0
@@ -40,7 +40,4 @@ window:
 
 background_opacity: 0.8
 live_config_reload: true
-
-shell:
-  program: /bin/zsh
 

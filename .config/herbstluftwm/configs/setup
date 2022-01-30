@@ -10,17 +10,15 @@ hc rule focus=on
 hc rule floatplacement=smart
 
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
-hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on
-hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DOCK|NOTIFICATION|DESKTOP)' manage=off
-# hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' manage=off focus=on
-# hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK)' manage=off focus=off
+# hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' floating=on
+# hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DOCK|NOTIFICATION|DESKTOP)' manage=off
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' manage=off focus=on
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK)' manage=off focus=off
 hc set tree_style '╾│ ├└╼─┐'
 
 hc rule class='code-oss' tag="DEV"
 hc rule class='Chromium' tag="WEB"
 hc rule class='firefox' tag="WEB"
-hc rule class='Brave-browser' tag="WEB"
-hc rule class='Brave-browser-nightly' tag="WEB"
 hc rule class='TelegramDesktop' tag="TEL"
 
 # find the panel

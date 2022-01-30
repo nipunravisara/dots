@@ -10,22 +10,6 @@ xrandr
 # merge in defaults and keymaps
 xrdb -merge ~/.Xresources
 
-# if [ -f $sysresources ]; then
-#     xrdb -merge $sysresources
-# fi
-
-# if [ -f $sysmodmap ]; then
-#     xmodmap $sysmodmap
-# fi
-
-# if [ -f "$userresources" ]; then
-#     xrdb -merge "$userresources"
-# fi
-
-# if [ -f "$usermodmap" ]; then
-#     xmodmap "$usermodmap"
-# fi
-
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Set cursor
@@ -52,13 +36,11 @@ sxhkd & >/dev/null
 # polybar
 ~/.config/polybar/launch.sh & > /dev/null
 
-pulseaudio --kill
-pulseaudio --start &
 # Start dwm
 # while type dwm > /dev/null ; do dwm && continue || break ; done
 
 # Start herbstluftwm
-# exec herbstluftwm --locked >/dev/null
+exec herbstluftwm --locked >/dev/null
 
 # Start bspwm
-exec bspwm > /dev/null
+#exec bspwm > /dev/null

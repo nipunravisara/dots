@@ -27,7 +27,6 @@ hc attr theme.border_width 0
 hc attr theme.floating.border_width 0
 hc attr theme.urgent.border_width 0
 
-hc attr theme.title_font 'Terminus (TTF):pixelsize=30:style=Bold'
 hc attr theme.active.color "$color2"
 hc attr theme.normal.color "$background"
 hc attr theme.urgent.color "$color15"
