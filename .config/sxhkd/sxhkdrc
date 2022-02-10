@@ -112,117 +112,117 @@ XF86MonBrightness{Up,Down}
 
 #------------------------ BSPWM controls ------------------------
 
-# # Close window
-# alt + q
-# 	bspc node -c
-# 
-# # Set the window state
-# alt + shift + {t,f,m}
-# 	bspc node -t {tiled,,floating,fullscreen}
-# 
-# # Focus next/previous window
-# alt + {Left, Right}
-#  	bspc node -f {prev, next}.local.!above
-# 
-# # Focus next window in the order
-# alt + Tab
-#     bspc node -f next.local:
-# 
-# # Focus other desktop
-# alt + {1-9, 0}
-#  	bspc desktop -f focused:'^{1-9,10}'
-# 
-# # Move window to other desktop
-# alt + shift + {1-9, 0}
-#  	bspc node -d focused:'^{1-9, 10}'
-# 
-# # expand a window by moving one of its side outward
-# super + alt + {h,j,k,l}
-# 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
-# 
-# # contract a window by moving one of its side inward
-# super + alt + shift + {h,j,k,l}
-# 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
-# 
-# # move a floating window
-# super + {Left,Down,Up,Right}
-# 	bspc node -v {-20 0,0 20,0 -20,20 0}
-# 
+# Close window
+alt + q
+	bspc node -c
+
+# Set the window state
+alt + shift + {t,f,m}
+	bspc node -t {tiled,,floating,fullscreen}
+
+# Focus next/previous window
+alt + {Left, Right}
+ 	bspc node -f {prev, next}.local.!above
+
+# Focus next window in the order
+alt + Tab
+    bspc node -f next.local:
+
+# Focus other desktop
+alt + {1-9, 0}
+ 	bspc desktop -f focused:'^{1-9,10}'
+
+# Move window to other desktop
+alt + shift + {1-9, 0}
+ 	bspc node -d focused:'^{1-9, 10}'
+
+# expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
 # Resize a window
-# alt + shift + {Left,Right,Up,Down}
-#	bspc node -z {left -20 0, left 20 0, top 0 -20, top 0 20}
+alt + shift + {Left,Right,Up,Down}
+	bspc node -z {left -20 0, left 20 0, top 0 -20, top 0 20}
 
 # Expand a window by moving one of its side outward
-# alt + shift + {Left,Down,Up,Right}
-#	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+alt + shift + {Left,Down,Up,Right}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # Contract a window by moving one of its side inward
-# alt + shift + shift + {Left,Down,Up,Right}
-#	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+alt + shift + shift + {Left,Down,Up,Right}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # Exit bspwm
-# alt + shift + {q, r}
-#	bspc {quit, wm -r}
+alt + shift + {q, r}
+	bspc {quit, wm -r}
 
 
 #------------------------ HERBSTLUFTWM controls ------------------------
 
-# Close window/application
-alt + q
-    herbstclient close
+# # Close window/application
+# alt + q
+#     herbstclient close
  
-# Realod herbstluftwm
- alt + shift + r
-    herbstclient reload
+# # Realod herbstluftwm
+#  alt + shift + r
+#     herbstclient reload
  
-# Exit herbstluftwm
- alt + shift + q
-    herbstclient quit
+# # Exit herbstluftwm
+#  alt + shift + q
+#     herbstclient quit
  
-# Focus windows
- alt + {Left,Down,Up,Right}
-    herbstclient {focus left,focus down,focus up,focus right}
+# # Focus windows
+#  alt + {Left,Down,Up,Right}
+#     herbstclient {focus left,focus down,focus up,focus right}
  
-# Moving windows
-alt + shift + {Left,Down,Up,Right}
-    herbstclient shift {left,down,up,right}
+# # Moving windows
+# alt + shift + {Left,Down,Up,Right}
+#     herbstclient shift {left,down,up,right}
  
-# Switch to tag
-alt + {1,2,3,4,5,6}
-    herbstclient use_index {0,1,2,3,4,5}
+# # Switch to tag
+# alt + {1,2,3,4,5,6}
+#     herbstclient use_index {0,1,2,3,4,5}
  
-# Move window to tag
-alt + shift + {1,2,3,4,5,6}
-    herbstclient move_index {0,1,2,3,4,5}
+# # Move window to tag
+# alt + shift + {1,2,3,4,5,6}
+#     herbstclient move_index {0,1,2,3,4,5}
  
-# Cycle forward through tags
-alt  + Tab
-    herbstclient use_index +1 --skip-visible
+# # Cycle forward through tags
+# alt  + Tab
+#     herbstclient use_index +1 --skip-visible
  
-# Cycle backward through tags
-alt  + shift + Tab
-    herbstclient use_index -1 --skip-visible
+# # Cycle backward through tags
+# alt  + shift + Tab
+#     herbstclient use_index -1 --skip-visible
  
-# Increase gap
-alt + shift + equal
-    herbstclient set frame_gap $(($(herbstclient get frame_gap) + 3))
+# # Increase gap
+# alt + shift + equal
+#     herbstclient set frame_gap $(($(herbstclient get frame_gap) + 3))
  
-# Decrease gap
-alt + shift + minus
-    herbstclient set frame_gap $(($(herbstclient get frame_gap) - 3))
+# # Decrease gap
+# alt + shift + minus
+#     herbstclient set frame_gap $(($(herbstclient get frame_gap) - 3))
  
-# Reset gap
-alt + shift + 0
-    herbstclient set frame_gap 0
+# # Reset gap
+# alt + shift + 0
+#     herbstclient set frame_gap 0
  
-## Shift client to specified monitor
-#alt + {apostrophe,section}
-#   herbstclient shift_to_monitor {1,0}
+# ## Shift client to specified monitor
+# #alt + {apostrophe,section}
+# #   herbstclient shift_to_monitor {1,0}
  
-# Layouting
-alt + {r, @space, shift+f, shift+m, shift+p}
-    herbstclient {remove, cycle_layout 1, floating toggle, fullscreen toggle, pseudotile toggle}
+# # Layouting
+# alt + {r, @space, shift+f, shift+m, shift+p}
+#     herbstclient {remove, cycle_layout 1, floating toggle, fullscreen toggle, pseudotile toggle}
  
-# Window splitting
-alt + {v,h,e}
-    herbstclient split {bottom 0.5,right 0.5, explode}
+# # Window splitting
+# alt + {v,h,e}
+#     herbstclient split {bottom 0.5,right 0.5, explode}

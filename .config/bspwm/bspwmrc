@@ -2,8 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-# bspc monitor -d DEV WEB FILES MUSIC VID
-bspc monitor -d      
+bspc monitor -d DEV EXT WEB FIL MUS TEL
 
 bspc config border_width         1
 bspc config window_gap           10
@@ -13,9 +12,15 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 bspc rule -a code-oss desktop='^1' follow=on
+
 bspc rule -a Chromium desktop='^2' follow=on
+bspc rule -a brave-browser-nightly desktop='^2' follow=on
+
+bspc rule -a *:*:Emulator desktop='^3'
+
+bspc rule -a TelegramDesktop desktop='^6' follow=on
+
+
 bspc rule -a jetbrains-studio state=floating
-bspc rule -a TelegramDesktop desktop='^5' follow=on
-bspc rule -a *:*:Emulator desktop=^3
 
 
